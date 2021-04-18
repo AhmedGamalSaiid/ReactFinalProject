@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState } from 'react'
-import firebaseApp from "../../../firebase";
 
 import verify from "../../../assets/svg/verifyEmail.svg";
 import { Link } from 'react-router-dom';

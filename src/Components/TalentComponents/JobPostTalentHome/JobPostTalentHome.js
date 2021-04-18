@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import JobDetailsTalent from "../../../Pages/TalentPages/JobDetailsTalent/JobDetailsTalent";
 
 export default function JobPostTalentHome() {
   return (

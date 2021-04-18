@@ -1,5 +1,4 @@
 import React from "react";
-import Profile from "../../../Pages/TalentPages/Profile/Profile";
 export default function AddandeditEmployementHistory() {
   return (
     <>

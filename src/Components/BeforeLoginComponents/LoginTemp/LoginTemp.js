@@ -46,7 +46,7 @@ export default function LoginTemp() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-5  mx-auto">
-            <div className="shadow-sm p-3 mb-5 bg-white rounded mx-auto mt-5 w-100  border ">
+            <div className="shadow-sm p-5 mb-5 bg-white rounded mx-auto mt-5 w-100  border ">
               <h5 data-v-904d5b16 className="text-center m-0">
                 <span data-v-733406b2 data-v-44072c38>
                   Log in and get to work
