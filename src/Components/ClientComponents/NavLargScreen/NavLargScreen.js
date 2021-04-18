@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { changeLayout } from "../../../Store/actions/changeLayout";
+// import { changeLayout } from "../../../Store/actions/changeLayout";
 
 export default function NavLargScreen() {
-  let layOut = useSelector((state) => state.layOut);
-  const dispatch = useDispatch();
+  // let layOut = useSelector((state) => state.layOut);
+  // const dispatch = useDispatch();
 
-  const changeLayOut = () => {
-    layOut = "talent";
-    dispatch(changeLayout(layOut));
-  };
+  // const changeLayOut = () => {
+  //   layOut = "talent";
+  //   dispatch(changeLayout(layOut));
+  // };
 
   return (
     <>
@@ -80,7 +80,7 @@ export default function NavLargScreen() {
               <div className="nav-dd-cn"></div>
               <li className="fw-bold py-1 ms-3">FINANCIALS</li>
               <li>
-                <a className="dropdown-item ps-3" href="#">
+                <a className="dropdown-item ps-3" href="a">
                   Transactions
                 </a>
               </li>
@@ -137,7 +137,7 @@ export default function NavLargScreen() {
                     budgets, weekly summaries and more when you upgrade.
                   </p>
                   <a
-                    href=""
+                    href="a"
                     style={{ color: "#6fda44" }}
                     className="d-block text-center mb-3"
                   >
@@ -153,24 +153,24 @@ export default function NavLargScreen() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="a">
               <i className="fas fa-question fs-5"></i>
             </a>
           </li>
           <li className="nav-item me-4">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="a">
               <i className="far fa-bell fs-5"></i>
             </a>
           </li>
           <li className="nav-item border-start border-secondary ps-2">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="a">
               <i className="fas fa-user-plus fs-5"></i>
             </a>
           </li>
           <li className="dropdown">
             <a
               className="nav-link dropdown-toggle"
-              href="#"
+              href="a"
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -217,7 +217,7 @@ export default function NavLargScreen() {
                 <NavLink
                   className="dropdown-item px-4"
                   to="/find-work"
-                  onClick={changeLayOut}
+                // onClick={changeLayOut}
                 >
                   <div className="d-flex align-items-center">
                     <span style={{ marginLeft: "-5px" }}>
@@ -244,7 +244,7 @@ export default function NavLargScreen() {
                 </NavLink>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="#">
+                <a className="dropdown-item px-4" href="a">
                   <span>
                     <i className="fa fa-cog"></i>
                   </span>
@@ -252,7 +252,7 @@ export default function NavLargScreen() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="#">
+                <a className="dropdown-item px-4" href="a">
                   <span>
                     <i className="fas fa-sign-out-alt"></i>
                   </span>

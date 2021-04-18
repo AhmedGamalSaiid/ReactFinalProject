@@ -33,17 +33,17 @@ export default function MessagesLeftSide() {
                                     aria-labelledby="dropdownMenuButton1"
                                 >
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                             Action
                     </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                             Another action
                     </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                             Something else here
                     </a>
                                     </li>

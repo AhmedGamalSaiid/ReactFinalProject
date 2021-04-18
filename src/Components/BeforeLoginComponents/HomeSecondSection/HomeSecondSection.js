@@ -21,7 +21,7 @@ export default function HomeSecondSection() {
         <div className="row">
           <div className="col-md-4 col-sm-12">
             <div className="shadow my-4 ss-box-cn position-relative">
-              <a className="d-inline-block p-5" href="">
+              <a className="d-inline-block p-5" href="a">
                 <h3>Post a job and hire a pro</h3>
                 <p className="mb-5 pb-5">Talent Marketplace</p>
                 <div className="position-absolute py-3 px-4 fs-2">
@@ -32,7 +32,7 @@ export default function HomeSecondSection() {
           </div>
           <div className="col-md-4 col-sm-12">
             <div className="shadow my-4 ss-box-cn position-relative">
-              <a className="d-inline-block p-5" href="">
+              <a className="d-inline-block p-5" href="a">
                 <h3>Browse and buy projects</h3>
                 <p className="mb-5 pb-5">Project Catalog</p>
                 <div className="position-absolute py-3 px-4 fs-2">
@@ -43,7 +43,7 @@ export default function HomeSecondSection() {
           </div>
           <div className="col-md-4 col-sm-12">
             <div className="shadow my-4 ss-box-cn position-relative">
-              <a className="d-inline-block p-5" href="">
+              <a className="d-inline-block p-5" href="a">
                 <h3>Let us find the right talent</h3>
                 <p className="mb-5 pb-5">Talent Scout</p>
                 <div className="position-absolute py-3 px-4 fs-2">
@@ -54,7 +54,7 @@ export default function HomeSecondSection() {
           </div>
           <p className="text-center my-3 fw-bold">
             Need a solution for large organizations?{" "}
-            <a href="" className="text-success">
+            <a href="a" className="text-success">
               Enterprise Suite has you covered.
             </a>
           </p>
@@ -63,37 +63,37 @@ export default function HomeSecondSection() {
           <div className="col-md-6 col-sm-12">
             <ul>
               <li>
-                <a href="" className="ss-ul-a-cn" style={{ color: "#6FDA44" }}>
+                <a href="a" className="ss-ul-a-cn" style={{ color: "#6FDA44" }}>
                   Development & IT
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn">
+                <a href="a" className="ss-ul-a-cn">
                   Design & Creative
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn">
+                <a href="a" className="ss-ul-a-cn">
                   Sales & Marketing
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn">
+                <a href="a" className="ss-ul-a-cn">
                   Writing
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn">
+                <a href="a" className="ss-ul-a-cn">
                   Customer Support
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn">
+                <a href="a" className="ss-ul-a-cn">
                   Accounting
                 </a>
               </li>
               <li>
-                <a href="" className="ss-ul-a-cn" style={{ color: "#6FDA44" }}>
+                <a href="a" className="ss-ul-a-cn" style={{ color: "#6FDA44" }}>
                   See all catrgories
                 </a>
               </li>
@@ -102,42 +102,42 @@ export default function HomeSecondSection() {
           <div className="col-md-6 col-sm-12">
             <div className="ms-5 mt-4">
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   AR/VR Development
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Automation Testing
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Back-End Development
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Business Applications Development
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   CMS Development
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Cloud Engineering
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Coding Tutoring
                 </a>
               </span>
               <span>
-                <a href="" className="ss-span-a-cn">
+                <a href="a" className="ss-span-a-cn">
                   Database Administration
                 </a>
               </span>

@@ -43,7 +43,7 @@ export default function JobPostLi() {
             <div className="text-muted">Hired</div>
           </div>
           <div className="d-block col-sm-2 col-xs-3">
-            <button type="button" class="btn btn-success">
+            <button type="button" className="btn btn-success">
               View Proposals
             </button>
           </div>
@@ -58,47 +58,47 @@ export default function JobPostLi() {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   View Proposals
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Invite freelancers
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Make Private
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Share job posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Upgrade to Featured
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   View Job posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Edit posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Reuse posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="a">
                   Remove posting
                 </a>
               </li>

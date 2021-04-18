@@ -47,7 +47,7 @@ export default function Flexera() {
             what needed to be done, jumped in, and got it done.”
           </div>
           <div className="d-flex fs-5 mx-1 ms-4 mt-4 mb-3">
-            <a href="#" className="text-decoration-none">
+            <a href="a" className="text-decoration-none">
               Read case study <i className="fas fa-arrow-right" />
             </a>
           </div>

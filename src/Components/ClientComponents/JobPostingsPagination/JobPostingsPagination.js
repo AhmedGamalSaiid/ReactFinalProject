@@ -13,28 +13,28 @@ export default function JobPostingsPagination() {
           <nav aria-label="Page navigation" className="paging">
             <ul className="pagination  fw-bold ">
               <li className="page-item">
-                <a className href="#">
+                <a className href="a">
                   <i className="fa fa-angle-left px-2"> </i>
                   Previous
                 </a>
               </li>
               <li className="page-item">
-                <a className="active" href="#" >
+                <a className="active" href="a" >
                   1
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="#">
+                <a className="" href="a">
                   2
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="#">
+                <a className="" href="a">
                   3
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="#">
+                <a className="" href="a">
                   Next<i className="fa fa-angle-right px-2"> </i>
                 </a>
               </li>

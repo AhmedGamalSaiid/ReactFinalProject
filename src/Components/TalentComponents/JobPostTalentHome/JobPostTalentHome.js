@@ -45,12 +45,12 @@ export default function JobPostTalentHome() {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="a">
                       RSS
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="a">
                       Atom
                     </a>
                   </li>
@@ -154,7 +154,7 @@ export default function JobPostTalentHome() {
           <p style={{ fontSize: "0.85em" }} className="my-lg-1 mb-lg-2">
             <span className="fw-bold " style={{ color: "#14bff4" }}>
               <i className="fas fa-check-circle primary" />
-              Payment verified  
+              Payment verified
             </span>
             <span className="text-muted">
               <span>
@@ -162,10 +162,10 @@ export default function JobPostTalentHome() {
                 <i className="fas fa-star" />
                 <i className="fas fa-star" />
                 <i className="fas fa-star" />
-                <i className="fas fa-star" /> 
+                <i className="fas fa-star" />
               </span>
               <span className="fw-bold "> $0</span>
-              <span> spent</span> 
+              <span> spent</span>
               <span className="fw-bold ">
                 <i className="fas fa-map-marker-alt" /> United States
               </span>

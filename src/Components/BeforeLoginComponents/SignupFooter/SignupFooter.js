@@ -7,13 +7,13 @@ export default function SignupFooter() {
             <ul className="list-unstyled text-white">
                 <li> © 2015 - 2021 Upwork® Global Inc.</li>
                 <li>
-                    <a href="">About Us</a>
+                    <a href="a">About Us</a>
                 </li>
                 <li>
-                    <a href="">Feedback</a>
+                    <a href="a">Feedback</a>
                 </li>
                 <li>
-                    <a href="">Community</a>
+                    <a href="a">Community</a>
                 </li>
             </ul>
         </footer>

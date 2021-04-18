@@ -2,19 +2,19 @@
 import React from 'react'
 import HeaderSearchSm from '../../SharedComponents/HeaderSearchSm/HeaderSearchSm';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { changeLayout } from '../../../Store/actions/changeLayout';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { changeLayout } from '../../../Store/actions/changeLayout';
 
 
 export default function NavSmallScreen() {
 
-    let layOut = useSelector((state) => state.layOut);
-    const dispatch = useDispatch();
+    // let layOut = useSelector((state) => state.layOut);
+    // const dispatch = useDispatch();
 
-    const changeLayOut = () => {
-        layOut = "talent";
-        dispatch(changeLayout(layOut));
-    }
+    // const changeLayOut = () => {
+    //     layOut = "talent";
+    //     dispatch(changeLayout(layOut));
+    // }
 
     return (
         <>
@@ -24,7 +24,7 @@ export default function NavSmallScreen() {
                         <HeaderSearchSm />
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-4 pt-4 border-top-cn" href="#" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-4 pt-4 border-top-cn" href="a" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="40" height="40"
                                 role="img" style={{ marginTop: "-10px" }}>
@@ -44,7 +44,9 @@ export default function NavSmallScreen() {
                                 </div>
                             </li>
                             <li>
-                                <Link className="dropdown-item px-4" to="/find-work" onClick={changeLayOut}>
+                                <Link className="dropdown-item px-4" to="/find-work"
+                                // onClick={changeLayOut}
+                                >
                                     <div className="d-flex align-items-center">
                                         <span style={{ marginLeft: "-5px" }}><i className="fa fa-user-circle fs-3"></i></span>
                                         <div className="acc-cn ms-2">
@@ -68,7 +70,7 @@ export default function NavSmallScreen() {
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link active dropdown-toggle mt-2 pt-3 border-top-cn" href="#"
+                        <a className="nav-link active dropdown-toggle mt-2 pt-3 border-top-cn" href="a"
                             id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Jobs
@@ -83,7 +85,7 @@ export default function NavSmallScreen() {
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="a" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Talent
                             <i className="fa fa-sort-down text-white float-end"></i>
@@ -94,14 +96,14 @@ export default function NavSmallScreen() {
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="a" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Reports
                             <i className="fa fa-sort-down text-white float-end"></i>
                         </a>
                         <ul className="dropdown-menu sub-drop-cn" aria-labelledby="navbarDropdownMenuLink">
                             <li className="fw-bold py-1 text-light" style={{ marginLeft: "-15px" }}>FINANCIALS</li>
-                            <li><a className="dropdown-item ps-3" href="#">Transactions</a></li>
+                            <li><a className="dropdown-item ps-3" href="a">Transactions</a></li>
                             <li className="border-top-cn fw-bold py-1 text-light" style={{ marginLeft: "-15px" }}>
                                 MORE REPORTS
                                 <div>
@@ -120,7 +122,7 @@ export default function NavSmallScreen() {
                                         </svg>
                                     </div>
                                     <p className="fw-normal p-3">Access premium reports such as hourly timesheets, team budgets, weekly summaries and more when you upgrade.</p>
-                                    <a href="" style={{ color: "#6fda44" }} className="d-block text-center mb-3">Learn More</a>
+                                    <a href="a" style={{ color: "#6fda44" }} className="d-block text-center mb-3">Learn More</a>
                                 </div>
                             </li>
                         </ul>
@@ -129,31 +131,31 @@ export default function NavSmallScreen() {
                         <Link className="nav-link mt-2 pt-3 border-top-cn" to="/c/messages">Messages</Link>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
                             Help
                             <i className="fas fa-question float-end"></i>
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
                             Notification
                             <i className="far fa-bell float-end"></i>
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
                             Invite a Coworker
                         <i className="fas fa-user-plus float-end" style={{ transform: "scaleX(-1)" }}></i>
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="#">
+                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="a">
                             <span><i className="fa fa-cog"></i></span>
                             <span className="ps-3">Settings</span>
                         </a>
                     </li>
                     <li className="nav-item pb-2">
-                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="#">
+                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="a">
                             <span><i className="fas fa-sign-out-alt"></i></span>
                             <span className="ps-3">Log Out</span>
                         </a>

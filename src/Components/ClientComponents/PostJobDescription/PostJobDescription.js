@@ -17,16 +17,16 @@ export default function PostJobDescription() {
                     <li>Anything unique about the project, team, or your company</li>
                 </ul>
             </div>
-            <div class="ps-4 pt-2 pe-4">
-                <textarea class="form-control" rows="8"></textarea>
+            <div className="ps-4 pt-2 pe-4">
+                <textarea className="form-control" rows="8"></textarea>
                 <span className="float-end">0/5000 characters (minimum 50)</span>
             </div>
-            <div class="mx-4 mt-5 py-2 pb-4">
-                <p class="fw-bold">Additional project files (optional)</p>
-                <div class="attachments-cn">
-                    <p class="py-2 text-center mt-2">drag or <a class="upw-c-cn" href="">upload</a> project images</p>
+            <div className="mx-4 mt-5 py-2 pb-4">
+                <p className="fw-bold">Additional project files (optional)</p>
+                <div className="attachments-cn">
+                    <p className="py-2 text-center mt-2">drag or <a className="upw-c-cn" href="a">upload</a> project images</p>
                 </div>
-                <p class="my-3">You may attach up to 5 files under <strong>100 MB</strong> each</p>
+                <p className="my-3">You may attach up to 5 files under <strong>100 MB</strong> each</p>
             </div>
             <div className="ps-4 my-3 pt-4 pb-3 pt-3 border-top">
                 <button className="btn border text-success me-4 px-5">Back</button>

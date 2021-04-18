@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { changeLayout } from "./../../../Store/actions/changeLayout";
+// import { changeLayout } from "./../../../Store/actions/changeLayout";
 
 export default function NavLargScreen() {
-  let layOut = useSelector((state) => state.layOut);
-  const dispatch = useDispatch();
+  // let layOut = useSelector((state) => state.layOut);
+  // const dispatch = useDispatch();
 
-  const changeLayOut = () => {
-    layOut = "client";
-    dispatch(changeLayout(layOut));
-  };
+  // const changeLayOut = () => {
+  //   layOut = "client";
+  //   dispatch(changeLayout(layOut));
+  // };
 
   return (
     <>
@@ -104,7 +104,7 @@ export default function NavLargScreen() {
                   Transaction History
                 </Link>
               </li>
-              {/* <li><a className="dropdown-item" href="#">Certificate of Earnings</a></li> */}
+              {/* <li><a className="dropdown-item" href="a">Certificate of Earnings</a></li> */}
             </ul>
           </li>
           <li className="nav-item me-5">
@@ -113,12 +113,12 @@ export default function NavLargScreen() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="a">
               <i className="fas fa-question fs-5"></i>
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="a">
               <i className="far fa-bell fs-5"></i>
             </a>
           </li>
@@ -133,7 +133,7 @@ export default function NavLargScreen() {
           <li className="dropdown">
             <a
               className="nav-link dropdown-toggle"
-              href="#"
+              href="a"
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -192,7 +192,7 @@ export default function NavLargScreen() {
               <li>
                 <NavLink
                   className="dropdown-item px-4 mb-1"
-                  onClick={changeLayOut}
+                  // onClick={changeLayOut}
                   to="/home"
                 >
                   <div className="d-flex align-items-center">
@@ -215,7 +215,7 @@ export default function NavLargScreen() {
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="#">
+                <a className="dropdown-item px-4" href="a">
                   <span>
                     <i className="fas fa-sign-out-alt"></i>
                   </span>

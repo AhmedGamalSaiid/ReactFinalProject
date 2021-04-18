@@ -36,7 +36,7 @@ export default function TransactionHistory() {
           </h4>
           <h5 className="m-xs-top-bottom nowrap ">
             Balance:
-            <a href="#" style={{ color: "#73bb44", textDecoration: "none" }}>
+            <a href="a" style={{ color: "#73bb44", textDecoration: "none" }}>
               <small className="lead-lg">$0.00</small>
             </a>
           </h5>

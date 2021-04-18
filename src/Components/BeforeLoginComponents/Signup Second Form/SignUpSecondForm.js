@@ -1,7 +1,64 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
-import apple from "../../../assets/svg/apple.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import firebaseApp from "../../../firebase";
+import { signUpAction } from './../../../Store/actions/signUp';
+
+
 
 export default function SignUpSecondForm() {
+
+  const { push } = useHistory();
+  let user = useSelector((state) => state.signUpData);
+  const dispatch = useDispatch();
+
+  var db = firebaseApp.firestore();
+
+  const getUserData = (e) => {
+    const val = e.target.value
+    const name = e.target.name
+    switch (name) {
+      case "firstName":
+        user.firstName = val;
+        break;
+      case "lastName":
+        user.lastName = val;
+        break;
+      case "password":
+        user.password = val;
+        break;
+      case "userType":
+        user.userType = val;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  dispatch(signUpAction(user));
+
+  const signUpComplete = () => {
+    firebaseApp.auth().createUserWithEmailAndPassword(user.email, user.password).then(res => {
+      console.log(res.user);
+      // if (res.user) {
+      //   res.user.sendEmailVerification();
+      // }
+      user.authID = res.user.uid
+      dispatch(signUpAction(user));
+      db.collection(user.userType).add(user)
+        .then(rs => {
+          console.log(rs)
+          push("/email-verification");
+        })
+        .catch(error => console.log(error));
+
+    }).catch(err => {
+      console.log(err);
+    })
+  }
+
   return (
     <div className="col-sm-12 col-md-6 mx-auto">
       <div className="shadow-sm p-3 mb-5 bg-white rounded mx-auto mt-5 w-100 border">
@@ -33,10 +90,12 @@ export default function SignUpSecondForm() {
               </span>
               <input
                 type="text"
+                name="firstName"
                 className="form-control  border-start-0"
                 placeholder="First Name"
                 aria-label="Input group example"
                 aria-describedby="basic-addon1"
+                onInput={getUserData}
               />
             </div>
             <div className="input-group col-6 w-50">
@@ -54,10 +113,12 @@ export default function SignUpSecondForm() {
               </span>
               <input
                 type="text"
+                name="lastName"
                 className="form-control  border-start-0"
                 placeholder="Last Name"
                 aria-label="Input group example"
                 aria-describedby="basic-addon1"
+                onInput={getUserData}
               />
             </div>
           </div>
@@ -68,18 +129,20 @@ export default function SignUpSecondForm() {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-lock-fill"
+                className="bi bi-lock-fill"
                 viewBox="0 0 16 16"
               >
                 <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
               </svg>
             </span>
             <input
-              type="text"
+              type="password"
+              name="password"
               className="form-control  border-start-0"
               placeholder="Password"
               aria-label="Input group example"
               aria-describedby="basic-addon1"
+              onInput={getUserData}
             />
           </div>
           <div>
@@ -91,21 +154,25 @@ export default function SignUpSecondForm() {
             >
               <input
                 type="radio"
+                name="userType"
                 className="btn-check"
-                name="btnradio"
                 id="btnradio1"
                 autoComplete="off"
                 defaultChecked
+                value="client"
+                onInput={getUserData}
               />
               <label className="btn btn-outline-upwork" htmlFor="btnradio1">
                 Hire for a project
               </label>
               <input
                 type="radio"
+                name="userType"
                 className="btn-check"
-                name="btnradio"
                 id="btnradio2"
                 autoComplete="off"
+                value="talent"
+                onInput={getUserData}
               />
               <label className="btn btn-outline-upwork" htmlFor="btnradio2">
                 Work as a freelancer
@@ -151,7 +218,7 @@ export default function SignUpSecondForm() {
           </div>
 
           <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-class loginpcolor mb-4">
-            <button className="btn bg-upwork " type="button">
+            <button className="btn bg-upwork " type="button" onClick={signUpComplete}>
               Continue with Email
             </button>
           </div>

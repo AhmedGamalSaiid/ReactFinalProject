@@ -15,7 +15,7 @@ export default function PlayingField() {
             work strategically with independent talent.
     </div>
           <div className="d-flex fs-5 mx-1">
-            <a href="#" className="text-decoration-none">
+            <a href="a" className="text-decoration-none">
               Schedule a Call <i className="fas fa-arrow-right" /></a>
           </div>
         </div>

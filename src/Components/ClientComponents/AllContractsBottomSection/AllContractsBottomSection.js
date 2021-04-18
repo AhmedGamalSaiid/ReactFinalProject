@@ -3,7 +3,7 @@ import React from "react";
 export default function AllContractsBottomSection() {
   return (
     <div className="text-center">
-      <svg  className="py-4 mt-5" width="145px" role="img" viewBox="0 0 145 130" xmlns="http://www.w3.org/2000/svg">
+      <svg className="py-4 mt-5" width="145px" role="img" viewBox="0 0 145 130" xmlns="http://www.w3.org/2000/svg">
         <circle cx="69.4" cy="65" fill="#1d4354" r="64.5"></circle>
         <path
           d="M7.6 83.4c7.9 26.6 32.6 46.1 61.8 46.1 29.2 0 53.9-19.4 61.8-46.1H7.6z"
@@ -47,11 +47,11 @@ export default function AllContractsBottomSection() {
       </svg>
       <h3>You haven't started any contracts yet.</h3>
       <h3>
-        <a href="#" className="text-success">
+        <a href="a" className="text-success">
           Post a job
         </a>{" "}
         or{" "}
-        <a href="#" className="text-success">
+        <a href="a" className="text-success">
           {" "}
           check out who's applied
         </a>{" "}

@@ -3,8 +3,8 @@ import React from "react";
 export default function TransactionTable({ transactiondata }) {
   return (
     <>
-      <div class="table-responsive">
-        <table class="table">
+      <div className="table-responsive">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">DATE</th>

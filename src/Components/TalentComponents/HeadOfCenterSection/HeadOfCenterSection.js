@@ -5,7 +5,7 @@ export default function HeadOfCenterSection() {
     <div>
       <div className="list-group-item my-lg-2  rounded text-center ">
         <h6>
-          <a href="#" className="text-decoration-none link-success">
+          <a href="a" className="text-decoration-none link-success">
             {" "}
             There are new jobs. Click to see them
           </a>
@@ -27,12 +27,12 @@ export default function HeadOfCenterSection() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="a">
                     RSS
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="a">
                     Atom
                   </a>
                 </li>

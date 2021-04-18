@@ -12,15 +12,15 @@ export default function FindFreelancingJob() {
     <div>
       <Header />
       <FindJobsHeader />
-      <section class="container py-3 px-5 small" id="main-section-ID">
-        <div class="row ">
+      <section className="container py-3 px-5 small" id="main-section-ID">
+        <div className="row ">
           <div className="col-xl-3 px-5 d-none d-xl-block">
             <TypeOfWork />
           </div>
           <div className="row d-block d-xl-none px-lg-5 px-1 py-3">
             <TypeOfWorkSmallSize />
           </div>
-          <div class="col-xl-9 col-12 px-lg-5 px-1 py-3">
+          <div className="col-xl-9 col-12 px-lg-5 px-1 py-3">
             <ListOfWork character="A" />
             <ListOfWork character="B" />
             <ListOfWork character="C" />

@@ -16,12 +16,12 @@ export default function Questions() {
                     </div>
                 </div>
                 <div className="col-xl-7 col-12 shadow-sm pb-5">
-                   <Question />
-                   <Question />
-                   <Question />
-                   <Question />
-                
-                
+                    <Question />
+                    <Question />
+                    <Question />
+                    <Question />
+
+
                 </div>
                 <div className="row">
                     <div className="col-xl-4">
@@ -29,7 +29,7 @@ export default function Questions() {
                     <div className="col-lg-7 col-12">
                         <div className="d-flex-row fs-5 mx-1 ms-4 mt-4 mb-3 ">
                             Still have questions? <pre className="d-inline"> </pre>
-                            <a href="#" className="text-decoration-none">
+                            <a href="a" className="text-decoration-none">
                                 Read case study <i className="fas fa-arrow-right" /></a>
                         </div>
                     </div>

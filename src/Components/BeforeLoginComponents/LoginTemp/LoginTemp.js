@@ -1,9 +1,46 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
 import { Link } from "react-router-dom";
+import firebaseApp from "../../../firebase";
 import apple from "../../../assets/svg/apple.svg";
+import { useState } from 'react';
+
 
 export default function LoginTemp() {
+
+  const [user, setUser] = useState({ email: '', password: '' });
+
+  const getUserData = (e) => {
+    const val = e.target.value;
+    const name = e.target.name;
+    switch (name) {
+      case "email":
+        setUser({
+          ...user,
+          email: val
+        })
+        break;
+      case "password":
+        setUser({
+          ...user,
+          password: val
+        })
+        break;
+      default:
+        break;
+    }
+  }
+
+  const login = () => {
+    firebaseApp.auth().signInWithEmailAndPassword(user.email, user.password)
+      .then((user) => {
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        console.log(error.code);
+      })
+  }
+
   return (
     <div>
       <div className="container-fluid">
@@ -19,16 +56,39 @@ export default function LoginTemp() {
                 <div className="form-group col-8 mx-auto mt-3">
                   <input
                     type="email"
-                    className="form-control"
-                    id="exampleInputEmail1"
+                    name="email"
+                    className="form-control shadow-none"
                     aria-describedby="emailHelp"
                     placeholder="Username or Email"
+                    onInput={getUserData}
                   />
                 </div>
+                <div className="form-group col-8 mx-auto mt-3">
+                  <input
+                    type="password"
+                    name="password"
+                    className="form-control shadow-none"
+                    aria-describedby="emailHelp"
+                    placeholder="Password"
+                    onInput={getUserData}
+                  />
+                </div>
+                <div className="form-group col-8 mx-auto mt-3 d-flex justify-content-between">
+                  <label>
+                    <input type="checkbox" className="me-2" />
+                    Keep me logged in
+                  </label>
+                  <Link to="">Forgot password?</Link>
+                </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-className loginpcolor">
-                  <button className="btn bg-upwork " type="button">
-                    Continue
+                  <button className="btn bg-upwork " type="button" onClick={login}>
+                    Login
                   </button>
+                </div>
+                <div className="d-grid gap-2 col-8 mx-auto mt-3">
+                  <Link to="" className="text-center">
+                    Not you?
+                  </Link>
                 </div>
                 <div className="separator mt-4 col-8 mx-auto">or</div>
                 <div className="google-btn  gap-2 mx-auto mt-3 rounded hitbtn-className col-sm-12">
@@ -70,6 +130,6 @@ export default function LoginTemp() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

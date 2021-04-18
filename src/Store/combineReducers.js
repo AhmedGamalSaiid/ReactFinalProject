@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import { changeLayoutReducer } from './reducers/changeLayoutReducer';
+import { SignUpReducer } from './reducers/signUp';
 
 export default combineReducers({
     //The Key is your type;
     //the value is reducer you will import
-    // count:counterReducer,
-    layOut: changeLayoutReducer
+    // count:counterReducer,import { SignUpReducer } from './reducers/signUp';
+
+    signUpData: SignUpReducer
 
 })
