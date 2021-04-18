@@ -42,9 +42,9 @@ export default function SignUpSecondForm() {
   const signUpComplete = () => {
     firebaseApp.auth().createUserWithEmailAndPassword(user.email, user.password).then(res => {
       console.log(res.user);
-      // if (res.user) {
-      //   res.user.sendEmailVerification();
-      // }
+      if (res.user) {
+        res.user.sendEmailVerification();
+      }
       user.authID = res.user.uid
       dispatch(signUpAction(user));
       db.collection(user.userType).add(user)

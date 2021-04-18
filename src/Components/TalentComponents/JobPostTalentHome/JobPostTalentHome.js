@@ -1,15 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function JobPostTalentHome() {
+
+  const { push } = useHistory();
+
+  const clickHandler = () => {
+    push("/job/");
+  }
+
   return (
     <div>
-      <Link to="/job/">
+      <div onClick={clickHandler}>
         <div className="list-group-item">
           <div className="row align-items-center">
             <div className="col-lg-9 pt-lg-3">
               <a
-                href
+                href="a"
                 id="job-title-home-page "
                 className="link-dark job-title-hover "
               >
@@ -29,7 +36,6 @@ export default function JobPostTalentHome() {
                   <i
                     className="far fa-heart"
                     aria-hidden="true"
-                    onclick="this.classList.toggle('fas')"
                   />
                 </button>
               </div>
@@ -97,7 +103,6 @@ export default function JobPostTalentHome() {
             </span>
             <span>
               <button
-                onclick="seemorebuttonFUNC()"
                 id="seemorebutton"
                 className="advanced-search-link "
               >
@@ -171,7 +176,7 @@ export default function JobPostTalentHome() {
             </span>
           </p>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

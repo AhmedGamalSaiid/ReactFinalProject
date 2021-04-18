@@ -44,7 +44,7 @@ export default function NavSmallScreen() {
                                 </div>
                             </li>
                             <li>
-                                <Link className="dropdown-item px-4" href="/find-work">
+                                <Link className="dropdown-item px-4" to="/find-work">
                                     <div className="d-flex align-items-center">
                                         <span style={{ marginLeft: "-5px" }}><i className="fa fa-user-circle fs-3"></i></span>
                                         <div className="acc-cn ms-2">

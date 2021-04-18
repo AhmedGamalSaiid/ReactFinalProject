@@ -2,7 +2,9 @@
 import React from "react";
 // import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import firebaseApp from "../../../firebase";
 // import { changeLayout } from "./../../../Store/actions/changeLayout";
+import { useHistory } from 'react-router-dom';
 
 export default function NavLargScreen() {
   // let layOut = useSelector((state) => state.layOut);
@@ -12,6 +14,19 @@ export default function NavLargScreen() {
   //   layOut = "client";
   //   dispatch(changeLayout(layOut));
   // };
+
+  const { push } = useHistory();
+
+  const logout = () => {
+    firebaseApp.auth().signOut()
+      .then((res) => {
+        console.log(res);
+        push("/login");
+        window.location.reload();
+      }).catch((error) => {
+        console.log(error.message);
+      })
+  }
 
   return (
     <>
@@ -215,12 +230,12 @@ export default function NavLargScreen() {
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="a">
+                <button className="dropdown-item px-4" onClick={logout}>
                   <span>
                     <i className="fas fa-sign-out-alt"></i>
                   </span>
                   <span className="ps-2">Log Out</span>
-                </a>
+                </button>
               </li>
             </ul>
           </li>

@@ -81,9 +81,9 @@ export default function LoginTemp() {
                   <Link to="">Forgot password?</Link>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-className loginpcolor">
-                  <button className="btn bg-upwork " type="button" onClick={login}>
+                  <Link className="btn bg-upwork " to="/find-work" onClick={login}>
                     Login
-                  </button>
+                  </Link>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3">
                   <Link to="" className="text-center">
