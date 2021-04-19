@@ -13,46 +13,46 @@ export default function ListOfWork(props) {
                 </div>
                 <div className="row d-flex justify-content-space-between">
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Android App Development Jobs</a>
+                        <a href="#" className="text-dark">Android App Development Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Android Studio Jobs</a>
+                        <a href="#" className="text-dark">Android Studio Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Apple Xcode Jobs</a>
+                        <a href="#" className="text-dark">Apple Xcode Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Amazon EC2 Jobs</a>
+                        <a href="#" className="text-dark">Amazon EC2 Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">ASP.NET Jobs</a>
+                        <a href="#" className="text-dark">ASP.NET Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Apache Spark Jobs</a>
+                        <a href="#" className="text-dark">Apache Spark Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Alexa Skill Kit Jobs</a>
+                        <a href="#" className="text-dark">Alexa Skill Kit Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">ArcGIS Jobs</a>
+                        <a href="#" className="text-dark">ArcGIS Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Amazon Web Services Jobs</a>
+                        <a href="#" className="text-dark">Amazon Web Services Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">API Development Jobs</a>
+                        <a href="#" className="text-dark">API Development Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">App Store Jobss</a>
+                        <a href="#" className="text-dark">App Store Jobss</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Amazon Webstore Jobs</a>
+                        <a href="#" className="text-dark">Amazon Webstore Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Artificial Intelligence Jobs</a>
+                        <a href="#" className="text-dark">Artificial Intelligence Jobs</a>
                     </div>
                     <div className="col-lg-4 col-md-6 col-12 px-0 py-1">
-                        <a href="a" className="text-dark">Airtable Jobs </a>
+                        <a href="#" className="text-dark">Airtable Jobs </a>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 export default function JobPostsHeader() {
@@ -7,7 +8,7 @@ export default function JobPostsHeader() {
         <nav aria-label="breadcrumb" className="col-3">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <a href="a" className="text-success">MyJobs</a>
+              <a href="#" className="text-success">MyJobs</a>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               Jop posting

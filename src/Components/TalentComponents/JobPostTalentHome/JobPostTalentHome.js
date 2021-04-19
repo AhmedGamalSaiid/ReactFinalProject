@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { useHistory } from "react-router-dom";
 
@@ -16,9 +17,9 @@ export default function JobPostTalentHome() {
           <div className="row align-items-center">
             <div className="col-lg-9 pt-lg-3">
               <a
-                href="a"
-                id="job-title-home-page "
-                className="link-dark job-title-hover "
+                href="#"
+                id="job-title-home-page"
+                className="link-dark job-title-hover"
               >
                 <p className="fw-bold ">Figma Prototype</p>
               </a>
@@ -50,12 +51,12 @@ export default function JobPostTalentHome() {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="a">
+                    <a className="dropdown-item" href="#">
                       RSS
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="a">
+                    <a className="dropdown-item" href="#">
                       Atom
                     </a>
                   </li>

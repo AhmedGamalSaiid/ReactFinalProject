@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './ArticleCard.css'
 export default function ArticleCard(props) {
@@ -15,7 +16,7 @@ export default function ArticleCard(props) {
                     <p className="fs-6">
                         {props.content}
                     </p>
-                    <a href="a" className="fs-5 text-decoration-none">Learn more <i className="fas fa-arrow-down" /></a>
+                    <a href="#" className="fs-5 text-decoration-none">Learn more <i className="fas fa-arrow-down" /></a>
                 </div>
             </div>
         </div>

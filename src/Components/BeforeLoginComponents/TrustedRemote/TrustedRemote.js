@@ -59,7 +59,7 @@ export default function TrustedRemote() {
                 </div>
                 <div className="d-flex fs-5 mb-5">
                     Looking for something else?
-                <a href="a" className="text-decoration-none">
+                <a href="#" className="text-decoration-none">
                         Browse all skills <i className="fas fa-arrow-down" /></a>
                 </div>
             </div>

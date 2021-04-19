@@ -80,7 +80,7 @@ export default function NavLargScreen() {
               <div className="nav-dd-cn"></div>
               <li className="fw-bold py-1 ms-3">FINANCIALS</li>
               <li>
-                <a className="dropdown-item ps-3" href="a">
+                <a className="dropdown-item ps-3" href="#">
                   Transactions
                 </a>
               </li>
@@ -137,7 +137,7 @@ export default function NavLargScreen() {
                     budgets, weekly summaries and more when you upgrade.
                   </p>
                   <a
-                    href="a"
+                    href="#"
                     style={{ color: "#6fda44" }}
                     className="d-block text-center mb-3"
                   >
@@ -153,24 +153,24 @@ export default function NavLargScreen() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="a">
+            <a className="nav-link" href="#">
               <i className="fas fa-question fs-5"></i>
             </a>
           </li>
           <li className="nav-item me-4">
-            <a className="nav-link" href="a">
+            <a className="nav-link" href="#">
               <i className="far fa-bell fs-5"></i>
             </a>
           </li>
           <li className="nav-item border-start border-secondary ps-2">
-            <a className="nav-link" href="a">
+            <a className="nav-link" href="#">
               <i className="fas fa-user-plus fs-5"></i>
             </a>
           </li>
           <li className="dropdown">
             <a
               className="nav-link dropdown-toggle"
-              href="a"
+              href="#"
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -244,7 +244,7 @@ export default function NavLargScreen() {
                 </NavLink>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="a">
+                <a className="dropdown-item px-4" href="#">
                   <span>
                     <i className="fa fa-cog"></i>
                   </span>
@@ -252,7 +252,7 @@ export default function NavLargScreen() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item px-4" href="a">
+                <a className="dropdown-item px-4" href="#">
                   <span>
                     <i className="fas fa-sign-out-alt"></i>
                   </span>

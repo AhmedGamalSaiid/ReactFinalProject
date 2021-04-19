@@ -115,7 +115,7 @@ export default function AccountInfo() {
             <button
               type="button"
               className="btn btn-link"
-              href="a"
+              href="#"
               style={{ color: "#008329" }}
             >
               Enter your VAT ID to{" "}
@@ -158,7 +158,7 @@ export default function AccountInfo() {
             <button
               type="button"
               className="btn btn-link"
-              href="a"
+              href="#"
               style={{ color: "#008329" }}
             >
               Close account

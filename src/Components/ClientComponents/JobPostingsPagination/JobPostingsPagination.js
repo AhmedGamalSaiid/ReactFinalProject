@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./JobPostingsPagination.css"
 
@@ -13,28 +14,28 @@ export default function JobPostingsPagination() {
           <nav aria-label="Page navigation" className="paging">
             <ul className="pagination  fw-bold ">
               <li className="page-item">
-                <a className href="a">
+                <a className href="#">
                   <i className="fa fa-angle-left px-2"> </i>
                   Previous
                 </a>
               </li>
               <li className="page-item">
-                <a className="active" href="a" >
+                <a className="active" href="#" >
                   1
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="a">
+                <a className="" href="#">
                   2
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="a">
+                <a className="" href="#">
                   3
                 </a>
               </li>
               <li className="page-item">
-                <a className="" href="a">
+                <a className="" href="#">
                   Next<i className="fa fa-angle-right px-2"> </i>
                 </a>
               </li>

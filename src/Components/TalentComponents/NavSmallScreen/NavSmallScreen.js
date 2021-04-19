@@ -24,7 +24,7 @@ export default function NavSmallScreen() {
                         <HeaderSearchSm />
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-4 pt-4 border-top-cn" href="a" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-4 pt-4 border-top-cn" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="40" height="40"
                                 role="img" style={{ marginTop: "-10px" }}>
@@ -70,78 +70,78 @@ export default function NavSmallScreen() {
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link active dropdown-toggle mt-2 pt-3 border-top-cn" href="a"
+                        <a className="nav-link active dropdown-toggle mt-2 pt-3 border-top-cn" href="#"
                             id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Find Work
                             <i className="fa fa-sort-down text-white float-end"></i>
                         </a>
                         <ul className="dropdown-menu sub-drop-cn" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a className="dropdown-item" href="a">Find Work</a></li>
-                            <li><a className="dropdown-item" href="a">Saved Jobs</a></li>
-                            <li><a className="dropdown-item" href="a">Proposals</a></li>
-                            <li><a className="dropdown-item" href="a">Profile</a></li>
-                            <li><a className="dropdown-item" href="a">My Stats</a></li>
-                            <li><a className="dropdown-item" href="a">Upwork Readiness Test</a></li>
-                            <li><a className="dropdown-item" href="a">My Project Dashboard</a></li>
+                            <li><a className="dropdown-item" href="#">Find Work</a></li>
+                            <li><a className="dropdown-item" href="#">Saved Jobs</a></li>
+                            <li><a className="dropdown-item" href="#">Proposals</a></li>
+                            <li><a className="dropdown-item" href="#">Profile</a></li>
+                            <li><a className="dropdown-item" href="#">My Stats</a></li>
+                            <li><a className="dropdown-item" href="#">Upwork Readiness Test</a></li>
+                            <li><a className="dropdown-item" href="#">My Project Dashboard</a></li>
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="a" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             My Jobs
                             <i className="fa fa-sort-down text-white float-end"></i>
                         </a>
                         <ul className="dropdown-menu sub-drop-cn" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a className="dropdown-item" href="a">My Jobs</a></li>
-                            <li><a className="dropdown-item" href="a">All Contracts</a></li>
-                            <li><a className="dropdown-item" href="a">Work Diary</a></li>
+                            <li><a className="dropdown-item" href="#">My Jobs</a></li>
+                            <li><a className="dropdown-item" href="#">All Contracts</a></li>
+                            <li><a className="dropdown-item" href="#">Work Diary</a></li>
                         </ul>
                     </li>
                     <li className="dropdown px-3">
-                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="a" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Reports
                             <i className="fa fa-sort-down text-white float-end"></i>
                         </a>
                         <ul className="dropdown-menu sub-drop-cn" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a className="dropdown-item" href="a">Overview</a></li>
-                            <li><a className="dropdown-item" href="a">My Reports</a></li>
-                            <li><a className="dropdown-item" href="a">Lifetime Billings by Client</a></li>
-                            <li><a className="dropdown-item" href="a">Connects History</a></li>
-                            <li><a className="dropdown-item" href="a">Transaction History</a></li>
-                            <li><a className="dropdown-item" href="a">Certificate of Earnings</a></li>
+                            <li><a className="dropdown-item" href="#">Overview</a></li>
+                            <li><a className="dropdown-item" href="#">My Reports</a></li>
+                            <li><a className="dropdown-item" href="#">Lifetime Billings by Client</a></li>
+                            <li><a className="dropdown-item" href="#">Connects History</a></li>
+                            <li><a className="dropdown-item" href="#">Transaction History</a></li>
+                            <li><a className="dropdown-item" href="#">Certificate of Earnings</a></li>
                         </ul>
                     </li>
                     <li className="nav-item px-3">
                         <Link className="nav-link mt-2 pt-3 border-top-cn" to="/t/messages">Messages</Link>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
                             Help
                             <i className="fas fa-question float-end"></i>
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
                             Notification
                             <i className="far fa-bell float-end"></i>
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link mt-2 pt-3 border-top-cn" href="a">
+                        <a className="nav-link mt-2 pt-3 border-top-cn" href="#">
                             Direct Contracts
                             <i className="far fa-paper-plane float-end" style={{ transform: "scaleX(-1)" }}></i>
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="a">
+                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="#">
                             <span><i className="fa fa-cog"></i></span>
                             <span className="ps-3">Settings</span>
                         </a>
                     </li>
                     <li className="nav-item pb-2">
-                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="a">
+                        <a className="dropdown-item mt-2 pt-3 border-top-cn" href="#">
                             <span><i className="fas fa-sign-out-alt"></i></span>
                             <span className="ps-3">Log Out</span>
                         </a>

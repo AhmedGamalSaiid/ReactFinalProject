@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import ImgWithActiveStatus from "./../../../Components/ClientComponents/ImgWithActiveStatus/ImgWithActiveStatus";
 
@@ -60,7 +61,7 @@ export default function ReviewProposalsCard() {
             </button>
             <ul className="dropdown-menu ">
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Candidate will not be notified
                 </a>
               </li>

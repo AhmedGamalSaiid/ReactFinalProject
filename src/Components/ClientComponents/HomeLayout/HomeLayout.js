@@ -50,7 +50,7 @@ export default function HomeLayout() {
               <div className="row align-items-center">
                 <div className="col-lg-9 pt-lg-3">
                   <a
-                    href="a"
+                    href="#"
                     id="job-title-home-page "
                     className="link-dark job-title-hover"
                   >
@@ -88,12 +88,12 @@ export default function HomeLayout() {
                     </button>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="a">
+                        <a className="dropdown-item" href="#">
                           RSS
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="a">
+                        <a className="dropdown-item" href="#">
                           Atom
                         </a>
                       </li>
@@ -399,7 +399,7 @@ export default function HomeLayout() {
                 <div className="card-body">
                   <h5 className="card-title">Web Design</h5>
                   <p className="card-text">You think you might like help</p>
-                  <a href="a" className="btn bg-upwork ">
+                  <a href="#" className="btn bg-upwork ">
                     learn More
                   </a>
                 </div>
@@ -415,7 +415,7 @@ export default function HomeLayout() {
                 aria-current="true"
               >
                 <a
-                  href="a"
+                  href="#"
                   className="list-group-item-action advanced-search-link"
                   aria-current="true"
                 >
@@ -427,7 +427,7 @@ export default function HomeLayout() {
                 aria-current="true"
               >
                 <a
-                  href="a"
+                  href="#"
                   className="list-group-item-action advanced-search-link"
                   aria-current="true"
                 >
@@ -439,7 +439,7 @@ export default function HomeLayout() {
                 aria-current="true"
               >
                 <a
-                  href="a"
+                  href="#"
                   className="list-group-item-action advanced-search-link"
                   aria-current="true"
                 >
