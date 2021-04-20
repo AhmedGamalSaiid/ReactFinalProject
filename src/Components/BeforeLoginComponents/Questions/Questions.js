@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Question from '../Question/Question'
 
@@ -29,7 +30,7 @@ export default function Questions() {
                     <div className="col-lg-7 col-12">
                         <div className="d-flex-row fs-5 mx-1 ms-4 mt-4 mb-3 ">
                             Still have questions? <pre className="d-inline"> </pre>
-                            <a href="a" className="text-decoration-none">
+                            <a href="#" className="text-decoration-none">
                                 Read case study <i className="fas fa-arrow-right" /></a>
                         </div>
                     </div>

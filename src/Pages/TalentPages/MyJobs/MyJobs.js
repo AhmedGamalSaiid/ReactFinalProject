@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 export default function MyJobs() {
@@ -11,7 +12,7 @@ export default function MyJobs() {
               <h3 className="ms-auto bold">
                 {" "}
                 Earnings available now:
-                <a href="a">$39.74</a>
+                <a href="#">$39.74</a>
               </h3>
             </div>
             <div className="col-12 bg-white mb-3 p-5 border border-gray rounded">

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 export default function AllContractsBottomSection() {
@@ -47,11 +49,12 @@ export default function AllContractsBottomSection() {
       </svg>
       <h3>You haven't started any contracts yet.</h3>
       <h3>
-        <a href="a" className="text-success">
+        // eslint-disable-next-line
+        <a href="#" className="text-success">
           Post a job
         </a>{" "}
         or{" "}
-        <a href="a" className="text-success">
+        <a href="#" className="text-success">
           {" "}
           check out who's applied
         </a>{" "}

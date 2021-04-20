@@ -21,7 +21,7 @@ export default function Header() {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav">
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="a" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Find Talent
                                         <i className="fa fa-sort-down ms-1"></i>
                                         </a>
@@ -29,45 +29,45 @@ export default function Header() {
                                             <ul className="mt-3 d-inline-block">
                                                 <span className="fw-bold">TYPE OF WORK</span>
                                                 <li><Link className="dropdown-item" to="dev-it">Development & IT</Link></li>
-                                                <li><a className="dropdown-item" href="a">Design & Creative</a></li>
-                                                <li><a className="dropdown-item" href="a">Sales & Marketing</a></li>
-                                                <li><a className="dropdown-item" href="a">Writing & Translation</a></li>
-                                                <li><a className="dropdown-item" href="a">Admin & Customer Support</a></li>
-                                                <li><a className="dropdown-item" href="a">Finance & Accounting</a></li>
-                                                <li><a className="dropdown-item" href="a">See all specializations</a></li>
+                                                <li><a className="dropdown-item" href="#">Design & Creative</a></li>
+                                                <li><a className="dropdown-item" href="#">Sales & Marketing</a></li>
+                                                <li><a className="dropdown-item" href="#">Writing & Translation</a></li>
+                                                <li><a className="dropdown-item" href="#">Admin & Customer Support</a></li>
+                                                <li><a className="dropdown-item" href="#">Finance & Accounting</a></li>
+                                                <li><a className="dropdown-item" href="#">See all specializations</a></li>
                                             </ul>
                                             <div className="mt-3 ms-5 ps-4 d-inline-block">
                                                 <span className="fw-bold">WAYS TO HIRE</span>
                                                 <div className="d-flex mt-3 pb-5">
                                                     <div>
-                                                        <a href="a">
+                                                        <a href="#">
                                                             <p className="fw-bold">Talent Marketplace</p>
                                                             <p className="">Post a job and get proposals</p>
                                                         </a>
-                                                        <a href="a">
+                                                        <a href="#">
                                                             <p className="fw-bold">Talent Scout</p>
                                                             <p>Have us find you an expert</p>
                                                         </a>
                                                     </div>
                                                     <div className="ms-5">
-                                                        <a href="a">
+                                                        <a href="#">
                                                             <p className="fw-bold">Talent Scout</p>
                                                             <p className="">Have us find you an expert</p>
                                                         </a>
-                                                        <a href="a">
+                                                        <a href="#">
                                                             <p className="fw-bold">Enterprise Suite</p>
                                                             <p>Revamp the way you hire</p>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div className="border-top mt-5 pt-4">
-                                                    <a href="a">Learn how to hire on Upwork<i className="fa fa-arrow-right ms-3 text-success"></i></a>
+                                                    <a href="#">Learn how to hire on Upwork<i className="fa fa-arrow-right ms-3 text-success"></i></a>
                                                 </div>
                                             </div>
                                         </ul>
                                     </li>
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="a" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Find Work
                                         <i className="fa fa-sort-down ms-1"></i>
                                         </a>
@@ -76,19 +76,19 @@ export default function Header() {
                                                 <ul className="mt-3 d-inline-block">
                                                     <span className="fw-bold">TYPE OF WORK</span>
                                                     <li><Link className="dropdown-item mt-3" to="freelance-jobs">Development & IT</Link></li>
-                                                    <li><a className="dropdown-item" href="a">Design & Creative</a></li>
-                                                    <li><a className="dropdown-item" href="a">Sales & Marketing</a></li>
-                                                    <li><a className="dropdown-item" href="a">Writing & Translation</a></li>
+                                                    <li><a className="dropdown-item" href="#">Design & Creative</a></li>
+                                                    <li><a className="dropdown-item" href="#">Sales & Marketing</a></li>
+                                                    <li><a className="dropdown-item" href="#">Writing & Translation</a></li>
                                                 </ul>
                                                 <ul className="d-inline-block ms-5">
-                                                    <li><a className="dropdown-item mt-5 pt-4" href="a">Admin & Customer Support</a></li>
-                                                    <li><a className="dropdown-item" href="a">Finance & Accounting</a></li>
-                                                    <li><a className="dropdown-item" href="a">See all specializations</a></li>
+                                                    <li><a className="dropdown-item mt-5 pt-4" href="#">Admin & Customer Support</a></li>
+                                                    <li><a className="dropdown-item" href="#">Finance & Accounting</a></li>
+                                                    <li><a className="dropdown-item" href="#">See all specializations</a></li>
                                                 </ul>
                                             </div>
                                             <div className="mt-3 ps-4 d-inline-block">
                                                 <div className="border-top pt-3">
-                                                    <a href="a">
+                                                    <a href="#">
                                                         Learn how to get hired on Upwork
                                                     <i className="fa fa-arrow-right ms-3 text-success"></i>
                                                     </a>
@@ -97,15 +97,15 @@ export default function Header() {
                                         </ul>
                                     </li>
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="a" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link n-l-c-cn dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Why Upwork
                                         <i className="fa fa-sort-down ms-1"></i>
                                         </a>
                                         <ul id="why-work-dd-id" className="dropdown-menu mt-3" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a className="dropdown-item py-2 mt-3" href="a">SUccess Stories</a></li>
-                                            <li><a className="dropdown-item py-2" href="a">Reviews</a></li>
-                                            <li><a className="dropdown-item py-2" href="a">Learn</a></li>
-                                            <li><a className="dropdown-item py-2" href="a">Forums</a></li>
+                                            <li><a className="dropdown-item py-2 mt-3" href="#">SUccess Stories</a></li>
+                                            <li><a className="dropdown-item py-2" href="#">Reviews</a></li>
+                                            <li><a className="dropdown-item py-2" href="#">Learn</a></li>
+                                            <li><a className="dropdown-item py-2" href="#">Forums</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -118,11 +118,11 @@ export default function Header() {
                                 <i className="fa fa-search search-icon-cn"></i>
                             </button>
                             <div className="nav-item dropdown search-type-cn">
-                                <a className="nav-link dropdown-toggle" href="a" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="fa fa-sort-down search-icon-cn"></i>
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item px-4" href="a">
+                                    <a className="dropdown-item px-4" href="#">
                                         <div className="d-flex align-items-center">
                                             <span className="me-2 mb-3"><i className="fas fa-user fs-6"></i></span>
                                             <div className="acc-cn ms-2">
@@ -131,7 +131,7 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </a>
-                                    <a className="dropdown-item px-4" href="a">
+                                    <a className="dropdown-item px-4" href="#">
                                         <div className="d-flex align-items-center">
                                             <span className="me-2 mb-3"><i className="fas fa-clipboard-list fs-6"></i></span>
                                             <div className="acc-cn ms-2">
@@ -141,7 +141,7 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </a>
-                                    <a className="dropdown-item px-4" href="a">
+                                    <a className="dropdown-item px-4" href="#">
                                         <div className="d-flex align-items-center">
                                             <span className="me-2 mb-3"><i className="fas fa-briefcase fs-6"></i></span>
                                             <div className="acc-cn ms-2">
@@ -165,12 +165,12 @@ export default function Header() {
             <div className="second-nav-cn pt-2 pb-1">
                 <div className="container">
                     <ul className="d-flex align-items-center ms-0 ps-0">
-                        <li><a href="a">Development & IT</a></li>
-                        <li><a href="a">Design & Creative</a></li>
-                        <li><a href="a">Sales & Marketing</a></li>
-                        <li><a href="a">Writing & Translation</a></li>
-                        <li><a href="a">Admin & Customer Support</a></li>
-                        <li><a href="a">Finance & Accounting</a></li>
+                        <li><a href="#">Development & IT</a></li>
+                        <li><a href="#">Design & Creative</a></li>
+                        <li><a href="#">Sales & Marketing</a></li>
+                        <li><a href="#">Writing & Translation</a></li>
+                        <li><a href="#">Admin & Customer Support</a></li>
+                        <li><a href="#">Finance & Accounting</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
@@ -15,7 +16,7 @@ export default function RightSidebarTalentHome() {
         <h5 className="d-inline px-2">My Profile</h5>
       </div>
       <div className="my-lg-1">
-        <a href="a" className="advanced-search-link ">
+        <a href="#" className="advanced-search-link ">
           <i className="fas fa-eye"> </i> View Profile
         </a>
       </div>
@@ -86,7 +87,7 @@ export default function RightSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >
@@ -98,7 +99,7 @@ export default function RightSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >
@@ -110,7 +111,7 @@ export default function RightSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >

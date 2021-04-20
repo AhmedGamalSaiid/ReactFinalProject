@@ -52,7 +52,7 @@ export default function FindWorkTalentHome() {
             </button>
           </div>
           <span>
-            <a href="a" className="advanced-search-link">
+            <a href="#" className="advanced-search-link">
               Advanced Search
             </a>
           </span>

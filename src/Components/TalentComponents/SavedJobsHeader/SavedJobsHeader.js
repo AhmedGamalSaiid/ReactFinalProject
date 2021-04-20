@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './SavedJobsHeader.css';
 export default function SavedJobsHeader() {
@@ -12,7 +13,7 @@ export default function SavedJobsHeader() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action saved-homebage-ul-li-aa bg-white"
             aria-current="true"
           >
@@ -24,7 +25,7 @@ export default function SavedJobsHeader() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action saved-homebage-ul-li-aa active activesidesaved bg-white"
             aria-current="true"
           >

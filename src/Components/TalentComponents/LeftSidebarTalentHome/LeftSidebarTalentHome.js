@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 export default function LeftSidebarTalentHome() {
@@ -12,7 +13,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action sidebar-homebage-ul-li-aa activeside"
             aria-current="true"
           >
@@ -24,7 +25,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action sidebar-homebage-ul-li-aa"
             aria-current="true"
           >
@@ -39,7 +40,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action sidebar-homebage-ul-li-aa"
             aria-current="true"
           >
@@ -57,7 +58,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >
@@ -69,7 +70,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >
@@ -81,7 +82,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >
@@ -93,7 +94,7 @@ export default function LeftSidebarTalentHome() {
           aria-current="true"
         >
           <a
-            href="a"
+            href="#"
             className=" list-group-item-action advanced-search-link"
             aria-current="true"
           >

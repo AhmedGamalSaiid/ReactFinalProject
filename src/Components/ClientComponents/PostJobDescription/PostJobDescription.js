@@ -24,7 +24,7 @@ export default function PostJobDescription() {
             <div className="mx-4 mt-5 py-2 pb-4">
                 <p className="fw-bold">Additional project files (optional)</p>
                 <div className="attachments-cn">
-                    <p className="py-2 text-center mt-2">drag or <a className="upw-c-cn" href="a">upload</a> project images</p>
+                    <p className="py-2 text-center mt-2">drag or <a className="upw-c-cn" href="#">upload</a> project images</p>
                 </div>
                 <p className="my-3">You may attach up to 5 files under <strong>100 MB</strong> each</p>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import talentainSectionFlexeraDevIT from "../../../assets/img/talent-main-section-flexera-Dev-IT.png";
 import talentMainSectionArticle2FlexeraHeaderDevIT from "../../../assets/img/talent-main-section-article2-flexera-header-Dev-IT.svg";
@@ -47,7 +48,7 @@ export default function Flexera() {
             what needed to be done, jumped in, and got it done.”
           </div>
           <div className="d-flex fs-5 mx-1 ms-4 mt-4 mb-3">
-            <a href="a" className="text-decoration-none">
+            <a href="#" className="text-decoration-none">
               Read case study <i className="fas fa-arrow-right" />
             </a>
           </div>

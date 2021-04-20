@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import CustomButtonwithbackground from "../../../../Components/TalentComponents/CustomButtonwithBackground/CustomButton";
 import CustomButtonwithoutbackground from "../../../../Components/TalentComponents/CustomButtonwithoutbackground/CustomButton";
 import Date from "../../../../Components/TalentComponents/DateComponent/Date";
@@ -34,7 +35,7 @@ export default function TransactionHistory() {
           </h4>
           <h5 className="m-xs-top-bottom nowrap ">
             Balance:
-            <a href="a" style={{ color: "#73bb44", textDecoration: "none" }}>
+            <a href="#" style={{ color: "#73bb44", textDecoration: "none" }}>
               <small className="lead-lg">$0.00</small>
             </a>
           </h5>

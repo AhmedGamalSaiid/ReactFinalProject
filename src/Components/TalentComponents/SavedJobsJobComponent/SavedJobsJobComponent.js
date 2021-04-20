@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 export default function SavedJobsJobComponent() {
@@ -41,12 +42,12 @@ export default function SavedJobsJobComponent() {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   RSS
                   </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Atom
                   </a>
               </li>

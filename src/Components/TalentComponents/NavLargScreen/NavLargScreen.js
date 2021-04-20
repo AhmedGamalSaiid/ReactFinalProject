@@ -119,7 +119,7 @@ export default function NavLargScreen() {
                   Transaction History
                 </Link>
               </li>
-              {/* <li><a className="dropdown-item" href="a">Certificate of Earnings</a></li> */}
+              {/* <li><a className="dropdown-item" href="#">Certificate of Earnings</a></li> */}
             </ul>
           </li>
           <li className="nav-item me-5">
@@ -128,12 +128,12 @@ export default function NavLargScreen() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="a">
+            <a className="nav-link" href="#">
               <i className="fas fa-question fs-5"></i>
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="a">
+            <a className="nav-link" href="#">
               <i className="far fa-bell fs-5"></i>
             </a>
           </li>
@@ -148,7 +148,7 @@ export default function NavLargScreen() {
           <li className="dropdown">
             <a
               className="nav-link dropdown-toggle"
-              href="a"
+              href="#"
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"

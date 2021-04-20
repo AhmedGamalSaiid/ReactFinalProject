@@ -11,7 +11,7 @@ export default function HeaderSearchLg() {
                 <div className="dropdown search-type-cn">
                     <a
                         className="nav-link dropdown-toggle"
-                        href="a"
+                        href="#"
                         id="navbarDropdownMenuLink"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -22,7 +22,7 @@ export default function HeaderSearchLg() {
                     <ul
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdownMenuLink">
-                        <a className="dropdown-item px-4" href="a">
+                        <a className="dropdown-item px-4" href="#">
                             <div className="d-flex align-items-center">
                                 <span className="me-2 mb-3">
                                     <i className="fas fa-user fs-6"></i>
@@ -33,7 +33,7 @@ export default function HeaderSearchLg() {
                                 </div>
                             </div>
                         </a>
-                        <a className="dropdown-item px-4" href="a">
+                        <a className="dropdown-item px-4" href="#">
                             <div className="d-flex align-items-center">
                                 <span className="me-2 mb-3">
                                     <i className="fas fa-clipboard-list fs-6"></i>
@@ -52,7 +52,7 @@ export default function HeaderSearchLg() {
                                 </div>
                             </div>
                         </a>
-                        <a className="dropdown-item px-4" href="a">
+                        <a className="dropdown-item px-4" href="#">
                             <div className="d-flex align-items-center">
                                 <span className="me-2 mb-3">
                                     <i className="fas fa-briefcase fs-6"></i>

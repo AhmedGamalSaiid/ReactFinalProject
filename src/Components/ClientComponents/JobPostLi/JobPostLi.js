@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -58,47 +59,47 @@ export default function JobPostLi() {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   View Proposals
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Invite freelancers
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Make Private
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Share job posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Upgrade to Featured
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   View Job posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Edit posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Reuse posting
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="a">
+                <a className="dropdown-item" href="#">
                   Remove posting
                 </a>
               </li>
