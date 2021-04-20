@@ -1,68 +1,76 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import firebaseApp from "../../../firebase";
-import { signUpAction } from './../../../Store/actions/signUp';
-
-
+import createUser from "../../../Network/Network";
 
 export default function SignUpSecondForm() {
-
+  var [errMessage, seterrMessage] = useState("");
+  const userEmail = useSelector((state) => state.signUpData.email);
   const { push } = useHistory();
-  let user = useSelector((state) => state.signUpData);
-  const dispatch = useDispatch();
+  const [user, setuser] = useState({
+    email: userEmail,
+    firstName: "",
+    lastName: "",
+    password: "",
+    userType: "",
+    authID: "",
+  });
 
   var db = firebaseApp.firestore();
 
   const getUserData = (e) => {
-    const val = e.target.value
-    const name = e.target.name
+    const val = e.target.value;
+    const name = e.target.name;
     switch (name) {
       case "firstName":
-        user.firstName = val;
+        setuser({ ...user, firstName: val });
         break;
       case "lastName":
-        user.lastName = val;
+        setuser({ ...user, lastName: val });
         break;
       case "password":
-        user.password = val;
+        setuser({ ...user, password: val });
         break;
       case "userType":
-        user.userType = val;
+        setuser({ ...user, userType: val });
         break;
 
       default:
         break;
     }
-  }
-
-  dispatch(signUpAction(user));
+  };
 
   const signUpComplete = () => {
-    firebaseApp.auth().createUserWithEmailAndPassword(user.email, user.password).then(res => {
-      console.log(res.user);
-      if (res.user) {
-        res.user.sendEmailVerification();
-      }
-      user.authID = res.user.uid
-      dispatch(signUpAction(user));
-      db.collection(user.userType).add(user)
-        .then(rs => {
-          console.log(rs)
-          push("/email-verification");
-        })
-        .catch(error => console.log(error));
-
-    }).catch(err => {
-      console.log(err);
-    })
-  }
+    firebaseApp
+      .auth()
+      .createUserWithEmailAndPassword(user.email, user.password)
+      .then((res) => {
+        //console.log(res.user);
+        if (res.user) {
+          res.user.sendEmailVerification();
+        }
+        // let id =;
+        user.authID = res.user.uid;
+        console.log(user.authID);
+        setuser({ ...user, authID: user.authID });
+        console.log(user);
+        createUser(user.userType, user);
+        push("/email-verification");
+      })
+      .catch((err) => {
+        let er = err.message;
+        seterrMessage(er);
+        //console.log(er);
+      });
+  };
 
   return (
     <div className="col-sm-12 col-md-6 mx-auto">
       <div className="shadow-sm p-3 mb-5 bg-white rounded mx-auto mt-5 w-100 border">
         <form>
+          <h5 className="text-danger text-center">{errMessage}</h5>
           <h4 className="text-center m-0">
             <span
               style={{
@@ -218,7 +226,11 @@ export default function SignUpSecondForm() {
           </div>
 
           <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-class loginpcolor mb-4">
-            <button className="btn bg-upwork " type="button" onClick={signUpComplete}>
+            <button
+              className="btn bg-upwork "
+              type="button"
+              onClick={signUpComplete}
+            >
               Continue with Email
             </button>
           </div>

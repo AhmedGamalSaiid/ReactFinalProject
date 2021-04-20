@@ -1,0 +1,40 @@
+ const googleLogin = () => {
+    firebaseApp
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        /** @type {firebaseApp.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        push("/find-work");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const appleLogin = () => {
+    firebaseApp
+      .auth()
+      .signInWithPopup(appleProvider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // The signed-in user info.
+        var user = result.user;
+
+        // You can also get the Apple OAuth Access and ID Tokens.
+        var accessToken = credential.accessToken;
+        var idToken = credential.idToken;
+
+        // ...
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
