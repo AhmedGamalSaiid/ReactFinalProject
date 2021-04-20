@@ -5,9 +5,7 @@ import { updateData } from "../../../Network/Network";
 export default function CreateProfileEducationAndEmployment() {
   const [user, setuser] = useState({
     school: "",
-    company: "",
-    title: "",
-    stillWork: false,
+    company: { companyName: "", jobTitile: "", stillWork: false }
   });
   const getUserData = (e) => {
     const val = e.target.value;
@@ -17,13 +15,13 @@ export default function CreateProfileEducationAndEmployment() {
         setuser({ ...user, school: val });
         break;
       case "company":
-        setuser({ ...user, company: val });
+        setuser({ ...user, company: { ...user.company, companyName: val } });
         break;
       case "title":
-        setuser({ ...user, title: val });
+        setuser({ ...user, company: { ...user.company, jobTitile: val } });
         break;
       case "stillwork":
-        setuser({ ...user, stillWork: e.target.checked });
+        setuser({ ...user, company: { ...user.company, stillWork: e.target.checked } });
         break;
       default:
         break;

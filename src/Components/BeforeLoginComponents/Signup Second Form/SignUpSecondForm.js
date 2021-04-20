@@ -18,8 +18,6 @@ export default function SignUpSecondForm() {
     authID: "",
   });
 
-  var db = firebaseApp.firestore();
-
   const getUserData = (e) => {
     const val = e.target.value;
     const name = e.target.name;
