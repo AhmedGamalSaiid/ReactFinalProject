@@ -17,26 +17,26 @@ export default function LayOut() {
       setUser(user);
     }
   });
-  var MainLayout = () => {
-    if (user) {
-      if (usertype === "talent") {
-        return <TalentRoutes />;
-      } else {
-        return <ClientRoutes />;
-      }
-    } else {
-      return <BeforeLoginRoutes />;
-    }
-  };
+  // var MainLayout = () => {
+  //   if (user) {
+  //     if (usertype === "talent") {
+  //       return <TalentRoutes />;
+  //     } else {
+  //       return <ClientRoutes />;
+  //     }
+  //   } else {
+  //     return <BeforeLoginRoutes />;
+  //   }
+  // };
   return (
     <>
-      {/* {user ? (
+      {user ? (
         <TalentRoutes />
       ) : (
         // <ClientRoutes />
         <BeforeLoginRoutes />
-      )} */}
-      <MainLayout />
+      )}
+      {/* <MainLayout /> */}
     </>
   );
 }

@@ -1,15 +1,22 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import firebaseApp from "../../../firebase";
-import { signUpAction } from "./../../../Store/actions/signUp";
+import createUser from "../../../Network/Network";
 
 export default function SignUpSecondForm() {
-  const [errMessage, seterrMessage] = useState("");
+  var [errMessage, seterrMessage] = useState("");
+  const userEmail = useSelector((state) => state.signUpData.email);
   const { push } = useHistory();
-  let user = useSelector((state) => state.signUpData);
-  const dispatch = useDispatch();
+  const [user, setuser] = useState({
+    email: userEmail,
+    firstName: "",
+    lastName: "",
+    password: "",
+    userType: "",
+    authID: "",
+  });
 
   var db = firebaseApp.firestore();
 
@@ -18,16 +25,16 @@ export default function SignUpSecondForm() {
     const name = e.target.name;
     switch (name) {
       case "firstName":
-        user.firstName = val;
+        setuser({ ...user, firstName: val });
         break;
       case "lastName":
-        user.lastName = val;
+        setuser({ ...user, lastName: val });
         break;
       case "password":
-        user.password = val;
+        setuser({ ...user, password: val });
         break;
       case "userType":
-        user.userType = val;
+        setuser({ ...user, userType: val });
         break;
 
       default:
@@ -35,31 +42,27 @@ export default function SignUpSecondForm() {
     }
   };
 
-  dispatch(signUpAction(user));
-
   const signUpComplete = () => {
     firebaseApp
       .auth()
       .createUserWithEmailAndPassword(user.email, user.password)
       .then((res) => {
-        console.log(res.user);
+        //console.log(res.user);
         if (res.user) {
           res.user.sendEmailVerification();
         }
+        // let id =;
         user.authID = res.user.uid;
-        dispatch(signUpAction(user));
-        db.collection(user.userType)
-          .add(user)
-          .then((rs) => {
-            console.log(rs);
-            push("/email-verification");
-          })
-          .catch((error) => console.log(error));
+        console.log(user.authID);
+        setuser({ ...user, authID: user.authID });
+        console.log(user);
+        createUser(user.userType, user);
+        push("/email-verification");
       })
       .catch((err) => {
-        console.log(err.message);
         let er = err.message;
         seterrMessage(er);
+        //console.log(er);
       });
   };
 

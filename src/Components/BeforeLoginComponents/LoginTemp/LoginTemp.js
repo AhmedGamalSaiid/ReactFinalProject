@@ -1,12 +1,11 @@
-import { Link, useHistory } from "react-router-dom";
-import firebaseApp from "../../../firebase";
-import { appleProvider, googleProvider } from "../../../firebase";
+/* eslint-disable jsx-a11y/alt-text */
+import { Link } from "react-router-dom";
+import firebaseApp, { googleProvider } from "../../../firebase";
 import apple from "../../../assets/svg/apple.svg";
 import { useState } from "react";
 
 export default function LoginTemp() {
   const [user, setUser] = useState({ email: "", password: "" });
-  const { push } = useHistory();
 
   const getUserData = (e) => {
     const val = e.target.value;
@@ -30,27 +29,16 @@ export default function LoginTemp() {
   };
 
   const login = () => {
-    console.log(user);
     firebaseApp
       .auth()
       .signInWithEmailAndPassword(user.email, user.password)
-      .then((res) => {
-        console.log(res);
+      .then((user) => {
+        console.log(user);
       })
-      .catch((e) => {
-        console.log(e);
+      .catch((error) => {
+        console.log(error.message);
+        console.log(error.code);
       });
-    // firebaseApp
-    //   .auth()
-    //   .signInWithEmailAndPassword(user.email, user.password)
-    //   .then((res) => {
-    //     console.log(res);
-    //     push("/find-work");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //     console.log(error.code);
-    //   });
   };
 
   const googleLogin = () => {
@@ -66,28 +54,7 @@ export default function LoginTemp() {
         // The signed-in user info.
         var user = result.user;
         // ...
-        push("/find-work");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  const appleLogin = () => {
-    firebaseApp
-      .auth()
-      .signInWithPopup(appleProvider)
-      .then((result) => {
-        /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
-
-        // The signed-in user info.
-        var user = result.user;
-
-        // You can also get the Apple OAuth Access and ID Tokens.
-        var accessToken = credential.accessToken;
-        var idToken = credential.idToken;
-
-        // ...
+        // push("/find-work");
       })
       .catch((error) => {
         console.log(error);
@@ -134,9 +101,13 @@ export default function LoginTemp() {
                   <Link to="">Forgot password?</Link>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-className loginpcolor">
-                  <button className="btn bg-upwork " onClick={login}>
+                  <Link
+                    className="btn bg-upwork "
+                    to="/find-work"
+                    onClick={login}
+                  >
                     Login
-                  </button>
+                  </Link>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3">
                   <Link to="" className="text-center">
@@ -163,10 +134,7 @@ export default function LoginTemp() {
                     </p>
                   </div>
                 </div>
-                <div
-                  className="mb-5 d-grid gap-2 col-8 mx-auto mt-3 border border-dark rounded"
-                  onClick={appleLogin}
-                >
+                <div className="mb-5 d-grid gap-2 col-8 mx-auto mt-3 border border-dark rounded">
                   <button className="btn bg-light " type="button">
                     {" "}
                     <img src={apple} className="apple-icon" />
