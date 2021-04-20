@@ -2,10 +2,15 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { updateData } from './../../../Network/Network';
 
 export default function CreateProfilePhoneNumber() {
 
     const [value, setValue] = useState()
+
+    const getNumber = () => {
+        updateData("talent", { phoneNumber: value });
+    }
 
     return (
         <section className="bg-white border rounded mt-3 pt-4">
@@ -23,8 +28,8 @@ export default function CreateProfilePhoneNumber() {
                 <p>Your phone number will <strong>not</strong> be shared with clients.</p>
             </div>
             <div className="px-4 my-3 pt-4 border-top d-flex justify-content-between">
-                <Link className="btn border text-success me-4 px-5 fw-bold" to="/home">Back</Link>
-                <Link className="btn bg-upwork px-5" to="/create-profile/submit">Review Profile</Link>
+                <Link className="btn border text-success me-4 px-5 fw-bold" to="/create-profile/location">Back</Link>
+                <Link className="btn bg-upwork px-5" to="/create-profile/submit" onClick={getNumber}>Review Profile</Link>
             </div>
         </section >
     )

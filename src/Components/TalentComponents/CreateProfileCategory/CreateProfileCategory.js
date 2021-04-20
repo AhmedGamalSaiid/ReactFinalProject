@@ -1,34 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import firebaseApp, { db } from "../../../firebase";
 import { updateData } from "../../../Network/Network";
-import { signUpAction } from "../../../Store/actions/signUp";
 
 export default function CreateProfileCategory() {
+  let [cat, setCat] = useState();
   const catVal = (e) => {
     console.log(e.target);
-    updateData("talent", { jobCategory: e.target.value });
-    // let user = db.collection("talent").onSnapshot((data) => {
-    //   for (const key in data.docs) {
-    //     if (
-    //       data.docs[key].data().authID === firebaseApp.auth().currentUser.uid
-    //     ) {
-    //       db.collection("talent")
-    //         .doc(data.docs[key].id)
-    //         .update({ jobCategory: e.target.value, ahmed: "hamad" })
-    //         .then(() => {
-    //           console.log("done");
-    //         })
-    //         .catch((e) => {
-    //           console.log("fail");
-    //           console.log(e);
-    //         });
-    //     }
-    //   }
-    // });
+    cat = e.target.value;
+    setCat(cat)
   };
+
+  const addData = () => {
+    updateData("talent", { jobCategory: cat });
+  }
 
   return (
     <section className=" bg-white border rounded mt-3 pt-4">
@@ -56,6 +41,7 @@ export default function CreateProfileCategory() {
         <Link
           className="btn bg-upwork px-5"
           to="/create-profile/expertise-level"
+          onClick={addData}
         >
           Next
         </Link>

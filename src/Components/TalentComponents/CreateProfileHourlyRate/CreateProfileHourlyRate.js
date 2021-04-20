@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreateProfileHourlyRate.css";
+import { updateData } from './../../../Network/Network';
 
 export default function CreateProfileHourlyRate() {
   let [rate, setrate] = useState(0);
@@ -9,6 +10,10 @@ export default function CreateProfileHourlyRate() {
     rate = e.target.value;
     setrate(rate);
   };
+  const addRate = () => {
+    console.log(rate);
+    updateData("talent", { hourlyRate: rate });
+  }
   return (
     <section className=" bg-white border rounded mt-3 pt-4">
       <div className="border-bottom ps-4 pb-3">
@@ -59,7 +64,7 @@ export default function CreateProfileHourlyRate() {
               <span style={{ position: "relative", right: "148px" }}>
                 <i className="fas fa-dollar-sign"></i>
               </span>
-              <span className="text-end">{(rate * 100) / 20}</span>
+              <span className="text-end">{(rate * 20) / 100}</span>
               <span style={{ position: "relative", right: "-30px" }}>/hr</span>
             </div>
           </div>
@@ -78,6 +83,7 @@ export default function CreateProfileHourlyRate() {
                 className="form-control text-end"
                 type="number"
                 placeholder="00.00"
+                value={(rate * 80) / 100}
               />
               <span className="position-absolute">/hr</span>
             </div>
@@ -94,6 +100,7 @@ export default function CreateProfileHourlyRate() {
         <Link
           className="btn bg-upwork px-5"
           to="/create-profile/title-and-overview"
+          onClick={addRate}
         >
           Next
         </Link>

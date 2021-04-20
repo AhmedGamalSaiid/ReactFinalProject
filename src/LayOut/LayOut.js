@@ -11,7 +11,7 @@ export default function LayOut() {
   let [user, setUser] = useState();
   const usertype = useSelector((state) => state.signUpData.userType);
 
-  firebaseApp.auth().onAuthStateChanged((usr) => {
+  firebaseApp.auth().onAuthStateChanged(usr => {
     if (usr) {
       user = usr;
       setUser(user);
@@ -30,12 +30,12 @@ export default function LayOut() {
   // };
   return (
     <>
-      {user ? (
+      {user ?
         <TalentRoutes />
-      ) : (
+        :
         // <ClientRoutes />
         <BeforeLoginRoutes />
-      )}
+      }
       {/* <MainLayout /> */}
     </>
   );

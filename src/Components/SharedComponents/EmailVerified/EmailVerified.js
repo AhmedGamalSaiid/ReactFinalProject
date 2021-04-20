@@ -1,17 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 
 import verify from "../../../assets/svg/verifyEmail.svg";
-import { Link, useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function EmailVerified() {
-  const userType = useSelector((state) => state.signUpData.userType);
+  // const userType = useSelector((state) => state.signUpData.userType);
   //const { push } = useHistory();
-  const userRoute = () => {
-    // if (userType === "talent") {
-    //   push("/create-profile");
-    // }
-  };
+  // const userRoute = () => {
+  //   // if (userType === "talent") {
+  //   //   push("/create-profile");
+  //   // }
+  // };
 
   return (
     <div className="text-center" style={{ margin: "67px 0" }}>

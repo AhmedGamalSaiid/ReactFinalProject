@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { storage } from "../../../firebase";
+import { updateData } from "../../../Network/Network";
 
 export default function CreateProfilePhoto() {
   const [img, setimg] = useState(null);
   const [imgUrl, setimgUrl] = useState(null);
-  const [progress, setprogress] = useState(0);
 
   const hndlChange = (e) => {
     if (e.target.files[0]) {
@@ -16,12 +17,7 @@ export default function CreateProfilePhoto() {
     const uploadStep = storage.ref(`images/${img.name}`).put(img);
     uploadStep.on(
       "state_changed",
-      (snapshot) => {
-        const progress = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        setprogress(progress);
-      },
+      (snapshot) => {},
       (err) => {
         console.log(err);
       },
@@ -33,12 +29,13 @@ export default function CreateProfilePhoto() {
           .then((URL) => {
             let imgu = URL;
             setimgUrl(imgu);
-            console.log("img link", imgUrl);
+            URL && updateData("talent", { profilePhoto: URL });
           });
       }
     );
   };
-  console.log(img);
+
+  // console.log(img);
   return (
     <section className="bg-white border rounded mt-3 pt-4">
       <div className="border-bottom ps-4 pb-3">
@@ -60,7 +57,6 @@ export default function CreateProfilePhoto() {
               style={{ color: "#A0A0A0" }}
             ></i>
           )}
-          {progress > 99 && <progress value={progress} max="100" />}
         </div>
         <input type="file" onChange={hndlChange} />
         <button onClick={handlUpload}>upload</button>
