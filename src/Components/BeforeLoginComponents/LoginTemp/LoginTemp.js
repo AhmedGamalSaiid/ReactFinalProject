@@ -1,13 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import firebaseApp from "../../../firebase";
+import { appleProvider, googleProvider } from "../../../firebase";
 import apple from "../../../assets/svg/apple.svg";
-import { useState } from 'react';
-
+import { useState } from "react";
 
 export default function LoginTemp() {
-
-  const [user, setUser] = useState({ email: '', password: '' });
+  const [user, setUser] = useState({ email: "", password: "" });
+  const { push } = useHistory();
 
   const getUserData = (e) => {
     const val = e.target.value;
@@ -16,30 +15,84 @@ export default function LoginTemp() {
       case "email":
         setUser({
           ...user,
-          email: val
-        })
+          email: val,
+        });
         break;
       case "password":
         setUser({
           ...user,
-          password: val
-        })
+          password: val,
+        });
         break;
       default:
         break;
     }
-  }
+  };
 
   const login = () => {
-    firebaseApp.auth().signInWithEmailAndPassword(user.email, user.password)
-      .then((user) => {
-        console.log(user);
+    console.log(user);
+    firebaseApp
+      .auth()
+      .signInWithEmailAndPassword(user.email, user.password)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    // firebaseApp
+    //   .auth()
+    //   .signInWithEmailAndPassword(user.email, user.password)
+    //   .then((res) => {
+    //     console.log(res);
+    //     push("/find-work");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.message);
+    //     console.log(error.code);
+    //   });
+  };
+
+  const googleLogin = () => {
+    firebaseApp
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        /** @type {firebaseApp.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        push("/find-work");
       })
       .catch((error) => {
-        console.log(error.message);
-        console.log(error.code);
+        console.log(error);
+      });
+  };
+  const appleLogin = () => {
+    firebaseApp
+      .auth()
+      .signInWithPopup(appleProvider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // The signed-in user info.
+        var user = result.user;
+
+        // You can also get the Apple OAuth Access and ID Tokens.
+        var accessToken = credential.accessToken;
+        var idToken = credential.idToken;
+
+        // ...
       })
-  }
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -81,9 +134,9 @@ export default function LoginTemp() {
                   <Link to="">Forgot password?</Link>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-className loginpcolor">
-                  <Link className="btn bg-upwork " to="/find-work" onClick={login}>
+                  <button className="btn bg-upwork " onClick={login}>
                     Login
-                  </Link>
+                  </button>
                 </div>
                 <div className="d-grid gap-2 col-8 mx-auto mt-3">
                   <Link to="" className="text-center">
@@ -91,7 +144,10 @@ export default function LoginTemp() {
                   </Link>
                 </div>
                 <div className="separator mt-4 col-8 mx-auto">or</div>
-                <div className="google-btn  gap-2 mx-auto mt-3 rounded hitbtn-className col-sm-12">
+                <div
+                  className="google-btn  gap-2 mx-auto mt-3 rounded hitbtn-className col-sm-12"
+                  onClick={googleLogin}
+                >
                   <div className="google-icon-wrapper">
                     <img
                       className="google-icon"
@@ -107,7 +163,10 @@ export default function LoginTemp() {
                     </p>
                   </div>
                 </div>
-                <div className="mb-5 d-grid gap-2 col-8 mx-auto mt-3 border border-dark rounded">
+                <div
+                  className="mb-5 d-grid gap-2 col-8 mx-auto mt-3 border border-dark rounded"
+                  onClick={appleLogin}
+                >
                   <button className="btn bg-light " type="button">
                     {" "}
                     <img src={apple} className="apple-icon" />
@@ -130,6 +189,6 @@ export default function LoginTemp() {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

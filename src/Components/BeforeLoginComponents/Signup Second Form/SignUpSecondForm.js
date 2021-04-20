@@ -1,14 +1,12 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import firebaseApp from "../../../firebase";
-import { signUpAction } from './../../../Store/actions/signUp';
-
-
+import { signUpAction } from "./../../../Store/actions/signUp";
 
 export default function SignUpSecondForm() {
-
+  const [errMessage, seterrMessage] = useState("");
   const { push } = useHistory();
   let user = useSelector((state) => state.signUpData);
   const dispatch = useDispatch();
@@ -16,8 +14,8 @@ export default function SignUpSecondForm() {
   var db = firebaseApp.firestore();
 
   const getUserData = (e) => {
-    const val = e.target.value
-    const name = e.target.name
+    const val = e.target.value;
+    const name = e.target.name;
     switch (name) {
       case "firstName":
         user.firstName = val;
@@ -35,34 +33,41 @@ export default function SignUpSecondForm() {
       default:
         break;
     }
-  }
+  };
 
   dispatch(signUpAction(user));
 
   const signUpComplete = () => {
-    firebaseApp.auth().createUserWithEmailAndPassword(user.email, user.password).then(res => {
-      console.log(res.user);
-      if (res.user) {
-        res.user.sendEmailVerification();
-      }
-      user.authID = res.user.uid
-      dispatch(signUpAction(user));
-      db.collection(user.userType).add(user)
-        .then(rs => {
-          console.log(rs)
-          push("/email-verification");
-        })
-        .catch(error => console.log(error));
-
-    }).catch(err => {
-      console.log(err);
-    })
-  }
+    firebaseApp
+      .auth()
+      .createUserWithEmailAndPassword(user.email, user.password)
+      .then((res) => {
+        console.log(res.user);
+        if (res.user) {
+          res.user.sendEmailVerification();
+        }
+        user.authID = res.user.uid;
+        dispatch(signUpAction(user));
+        db.collection(user.userType)
+          .add(user)
+          .then((rs) => {
+            console.log(rs);
+            push("/email-verification");
+          })
+          .catch((error) => console.log(error));
+      })
+      .catch((err) => {
+        console.log(err.message);
+        let er = err.message;
+        seterrMessage(er);
+      });
+  };
 
   return (
     <div className="col-sm-12 col-md-6 mx-auto">
       <div className="shadow-sm p-3 mb-5 bg-white rounded mx-auto mt-5 w-100 border">
         <form>
+          <h5 className="text-danger text-center">{errMessage}</h5>
           <h4 className="text-center m-0">
             <span
               style={{
@@ -218,7 +223,11 @@ export default function SignUpSecondForm() {
           </div>
 
           <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-class loginpcolor mb-4">
-            <button className="btn bg-upwork " type="button" onClick={signUpComplete}>
+            <button
+              className="btn bg-upwork "
+              type="button"
+              onClick={signUpComplete}
+            >
               Continue with Email
             </button>
           </div>
