@@ -9,34 +9,34 @@ import { useState } from "react";
 
 export default function LayOut() {
   let [user, setUser] = useState();
-  const usertype = useSelector((state) => state.signUpData.userType);
+  const usertype = useSelector((state) => state.userData.userType);
 
-  firebaseApp.auth().onAuthStateChanged(usr => {
+  firebaseApp.auth().onAuthStateChanged((usr) => {
     if (usr) {
       user = usr;
       setUser(user);
     }
   });
-  // var MainLayout = () => {
-  //   if (user) {
-  //     if (usertype === "talent") {
-  //       return <TalentRoutes />;
-  //     } else {
-  //       return <ClientRoutes />;
-  //     }
-  //   } else {
-  //     return <BeforeLoginRoutes />;
-  //   }
-  // };
+  var MainLayout = () => {
+    if (user) {
+      if (usertype === "talent") {
+        return <TalentRoutes />;
+      } else {
+        return <ClientRoutes />;
+      }
+    } else {
+      return <BeforeLoginRoutes />;
+    }
+  };
   return (
     <>
-      {user ?
+      {/* {user ?
         <TalentRoutes />
         :
         // <ClientRoutes />
         <BeforeLoginRoutes />
-      }
-      {/* <MainLayout /> */}
+      } */}
+      <MainLayout />
     </>
   );
 }

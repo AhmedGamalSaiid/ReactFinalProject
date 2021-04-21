@@ -7,6 +7,7 @@ import { updateData } from "../../../Network/Network";
 export default function CreateProfilePhoto() {
   const [img, setimg] = useState(null);
   const [imgUrl, setimgUrl] = useState(null);
+  const [progress, setprogress] = useState(0);
 
   const hndlChange = (e) => {
     if (e.target.files[0]) {
@@ -17,7 +18,12 @@ export default function CreateProfilePhoto() {
     const uploadStep = storage.ref(`images/${img.name}`).put(img);
     uploadStep.on(
       "state_changed",
-      (snapshot) => {},
+      (snapshot) => {
+        const progress = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setprogress(progress);
+      },
       (err) => {
         console.log(err);
       },
@@ -49,6 +55,7 @@ export default function CreateProfilePhoto() {
           </Link>
         </p>
         <div className="w-25 text-center mt-5">
+          <progress value={progress} max="100" />
           {imgUrl ? (
             <img src={imgUrl} />
           ) : (
