@@ -2,6 +2,8 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
 import "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBYCGYP-tx6DJKgjd4cNPiYoOC3wNk1cwk",
@@ -18,6 +20,7 @@ const storage = firebase.storage();
 //const dbRef = firebase.database().ref();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 const appleProvider = new firebase.auth.OAuthProvider("apple.com");
+//const storage = firebaseApp.storage();
 
 export { myAuth, googleProvider, appleProvider, db, storage };
 export default firebaseApp;

@@ -24,7 +24,7 @@ export default function CreateProfileCategory() {
         <h5 className="fw-bold mb-4">Tell us about the work you do</h5>
         <p className="fw-bold">What is the main service you offer?</p>
         <select
-          class="form-select form-select-lg mb-3 shadow-none"
+          className="form-select form-select-lg mb-3 shadow-none"
           aria-label=".form-select-lg example"
           onChange={catVal}
         >
