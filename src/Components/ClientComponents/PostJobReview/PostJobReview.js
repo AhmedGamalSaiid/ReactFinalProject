@@ -1,7 +1,28 @@
-import React from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { db } from '../../../firebase'
 import './PostJobReview.css'
 export default function PostJobReview() {
+
+    let [job, setJob] = useState({})
+
+    const id = localStorage.getItem("docID");
+    useEffect(() => {
+        db.collection("job").doc(id).get().then(doc => {
+            console.log(doc.data());
+            job = doc.data();
+            setJob(job);
+        }).catch(err => console.log(err));
+    }, [])
+
+
+    // getCurrentPostJob(id).then(doc => {
+    //     job = doc;
+    //     setJob(job);
+    //     console.log(job);
+    // }).catch(err => console.log(err));
+
     return (
         <>
             <section className=" bg-white border rounded mt-3">
@@ -14,11 +35,11 @@ export default function PostJobReview() {
                     <div>
                         <div className="my-4">
                             <h6>Title</h6>
-                            <p>(var)</p>
+                            <p>{job.jobTitle}</p>
                         </div>
                         <div>
                             <h6>Job Category</h6>
-                            <p>(var)</p>
+                            <p>{job.jobCategory}</p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +51,7 @@ export default function PostJobReview() {
                     <div>
                         <div className="my-4">
                             <h6>Description</h6>
-                            <p>(var)</p>
+                            <p>{job.jobDecription}</p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +63,7 @@ export default function PostJobReview() {
                     <div>
                         <div className="my-4">
                             <h6>Type of Project</h6>
-                            <p>(var)</p>
+                            <p>{job.jobType}</p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +75,7 @@ export default function PostJobReview() {
                     <div>
                         <div className="my-4">
                             <h6>Experience Level</h6>
-                            <p>(var)</p>
+                            <p>{job.jobExperienceLevel}</p>
                         </div>
                     </div>
                 </div>
@@ -66,7 +87,7 @@ export default function PostJobReview() {
                     <div>
                         <div className="my-4">
                             <h6>Job Posting Visibility</h6>
-                            <p>(var)</p>
+                            <p>{job.jobVisibility}</p>
                         </div>
                     </div>
                 </div>
@@ -78,11 +99,11 @@ export default function PostJobReview() {
                     <div className="d-flex">
                         <div className="my-4 w-50">
                             <h6>JobHourly or Fixed-Price</h6>
-                            <p>(var)</p>
+                            <p>{job.jobPaymentType}</p>
                         </div>
                         <div className="my-4">
                             <h6>Budget</h6>
-                            <p>(var)</p>
+                            <p>{job.jobBudget}</p>
                         </div>
                     </div>
                 </div>

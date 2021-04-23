@@ -6,7 +6,7 @@ const createDocument = (collectionName, data) => {
         .add(data)
         .then(res => {
             console.log("collection added with id: " + res.id);
-
+            localStorage.setItem("docID", res.id);
         })
         .catch(error => console.log(error));
 };
@@ -26,18 +26,20 @@ export const updateUserData = (collectionName, newData) => {
     });
 };
 
-export const updateJob = newData => {
+export const updateJob = (newData, docID) => {
     db.collection("job").get().then(allDocs => {
         allDocs.forEach(doc => {
-            if (doc.data().authID === firebaseApp.auth().currentUser.uid) {
+            if (doc.id === docID) {
+                console.log(doc.id);
                 db.collection("job")
                     .doc(doc.id)
                     .update(newData)
-                    .then(() => console.log("updated"))
-                    .catch(() => console.log("fail"));
+                    .then(() => console.log("job updated"))
+                    .catch(() => console.log("fail to update job"));
             }
         });
     });
 };
+
 
 export default createDocument;
