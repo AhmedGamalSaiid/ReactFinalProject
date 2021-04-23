@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { updateData } from '../../../Network/Network';
+import { updateUserData } from '../../../Network/Network';
 
 export default function CreateProfileTitleAndOverview() {
 
@@ -23,7 +23,7 @@ export default function CreateProfileTitleAndOverview() {
 
     const addData = () => {
         console.log(data);
-        updateData("talent", data);
+        updateUserData("talent", data);
     }
 
 

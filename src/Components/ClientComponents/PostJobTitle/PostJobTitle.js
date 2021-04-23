@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './PostJobTitle.css'
 
 export default function PostJobTitle() {
@@ -29,11 +30,16 @@ export default function PostJobTitle() {
                 <div className="border-bottom ps-4">
                     <h4>Job Category</h4>
                     <p className="w-75">Let's categorize your job, which helps us personalize your job details and match your job to relevant freelancers and agencies.</p>
-                    <button className="btn text-success fw-bold mb-2 see-all-cat-cn">See all categories</button>
+                    <select className="form-select form-select-lg mb-3 shadow-none w-50" aria-label=".form-select-lg example">
+                        <option selected>Select a category</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                    </select>
                 </div>
                 <div className="ps-4 my-3">
-                    <button className="btn border text-success me-4 px-5">Exit</button>
-                    <button className="btn btn-secondary px-5 disabled">Next</button>
+                    <Link className="btn border text-success me-4 px-5" to="/post-job">Back</Link>
+                    <Link className="btn bg-upwork px-5" to="/post-job/description">Next</Link>
                 </div>
             </section>
         </>

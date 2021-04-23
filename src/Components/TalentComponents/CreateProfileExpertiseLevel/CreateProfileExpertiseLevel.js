@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { updateData } from "../../../Network/Network";
+import { updateUserData } from "../../../Network/Network";
 
 export default function CreateProfileExpertiseLevel() {
   let onChangeVal = (e) => {
     console.log(e.target.value);
-    updateData("talent", { expertiseLevel: e.target.value });
+    updateUserData("talent", { expertiseLevel: e.target.value });
   };
 
   return (

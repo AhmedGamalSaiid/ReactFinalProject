@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './PostJobDescription.css'
 export default function PostJobDescription() {
     return (
@@ -29,8 +30,8 @@ export default function PostJobDescription() {
                 <p className="my-3">You may attach up to 5 files under <strong>100 MB</strong> each</p>
             </div>
             <div className="ps-4 my-3 pt-4 pb-3 pt-3 border-top">
-                <button className="btn border text-success me-4 px-5">Back</button>
-                <button className="btn btn-secondary px-5 disabled">Next</button>
+                <Link className="btn border text-success me-4 px-5" to="/post-job/title">Back</Link>
+                <Link className="btn bg-upwork px-5" to="/post-job/details">Next</Link>
             </div>
         </section>
     )

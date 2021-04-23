@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import firebaseApp from "../../../firebase";
-import createUser from "../../../Network/Network";
+import createDocument from "../../../Network/Network";
 
 export default function SignUpSecondForm() {
   var [errMessage, seterrMessage] = useState("");
@@ -44,23 +44,17 @@ export default function SignUpSecondForm() {
     firebaseApp
       .auth()
       .createUserWithEmailAndPassword(user.email, user.password)
-      .then((res) => {
-        //console.log(res.user);
+      .then(res => {
         if (res.user) {
           res.user.sendEmailVerification();
         }
-        // let id =;
         user.authID = res.user.uid;
-        console.log(user.authID);
         setuser({ ...user, authID: user.authID });
-        console.log(user);
-        createUser(user.userType, user);
+        createDocument(user.userType, user);
         push("/email-verification");
       })
-      .catch((err) => {
-        let er = err.message;
-        seterrMessage(er);
-        //console.log(er);
+      .catch(err => {
+        seterrMessage(err.message);
       });
   };
 

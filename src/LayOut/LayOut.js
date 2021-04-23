@@ -31,9 +31,9 @@ export default function LayOut() {
   return (
     <>
       {user ?
-        <TalentRoutes />
+        // <TalentRoutes />
+        <ClientRoutes />
         :
-        // <ClientRoutes />
         <BeforeLoginRoutes />
       }
       {/* <MainLayout /> */}

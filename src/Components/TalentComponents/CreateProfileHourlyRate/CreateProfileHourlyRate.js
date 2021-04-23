@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreateProfileHourlyRate.css";
-import { updateData } from './../../../Network/Network';
+import { updateUserData } from './../../../Network/Network';
 
 export default function CreateProfileHourlyRate() {
   let [rate, setrate] = useState(0);
@@ -12,7 +12,7 @@ export default function CreateProfileHourlyRate() {
   };
   const addRate = () => {
     console.log(rate);
-    updateData("talent", { hourlyRate: rate });
+    updateUserData("talent", { hourlyRate: rate });
   }
   return (
     <section className=" bg-white border rounded mt-3 pt-4">

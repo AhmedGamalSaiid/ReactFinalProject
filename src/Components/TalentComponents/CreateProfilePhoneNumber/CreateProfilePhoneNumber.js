@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-import { updateData } from './../../../Network/Network';
+import { updateUserData } from './../../../Network/Network';
 
 export default function CreateProfilePhoneNumber() {
 
     const [value, setValue] = useState()
 
     const getNumber = () => {
-        updateData("talent", { phoneNumber: value });
+        updateUserData("talent", { phoneNumber: value });
     }
 
     return (

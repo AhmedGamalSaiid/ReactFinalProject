@@ -3,7 +3,7 @@ import CountrySelect from "react-bootstrap-country-select";
 import { Link } from "react-router-dom";
 import "react-bootstrap/dist/react-bootstrap";
 import "react-bootstrap-country-select/dist/react-bootstrap-country-select.css";
-import { updateData } from './../../../Network/Network';
+import { updateUserData } from './../../../Network/Network';
 
 export default function CreateProfileLocation() {
   let [country, setCountry] = useState();
@@ -28,7 +28,7 @@ export default function CreateProfileLocation() {
   const addData = () => {
     locationData.location.country = country.name;
     setLocationData({ location: { ...locationData.location, country: locationData.location.country } });
-    updateData("talent", locationData)
+    updateUserData("talent", locationData)
   }
   return (
     <section className="bg-white border rounded mt-3 pt-4">

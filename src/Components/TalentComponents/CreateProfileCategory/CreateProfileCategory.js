@@ -1,18 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { updateData } from "../../../Network/Network";
+import { updateUserData } from "../../../Network/Network";
 
 export default function CreateProfileCategory() {
   let [cat, setCat] = useState();
-  const catVal = (e) => {
-    console.log(e.target);
+  const catVal = e => {
     cat = e.target.value;
     setCat(cat)
   };
 
   const addData = () => {
-    updateData("talent", { jobCategory: cat });
+    updateUserData("talent", { jobCategory: cat });
   }
 
   return (

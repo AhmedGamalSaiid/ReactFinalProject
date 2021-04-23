@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { updateData } from "../../../Network/Network";
+import { updateUserData } from "../../../Network/Network";
 
 export default function CreateProfileLanguage() {
   let [language, setlanguage] = useState("");
 
   const lang = (e) => {
-    // updateData("talent", { englishProficiency: e.target.value });
+    // updateUserData("talent", { englishProficiency: e.target.value });
     language = e.target.value;
     setlanguage(language);
   };
   const updateuser = () => {
-    updateData("talent", { englishProficiency: language });
+    updateUserData("talent", { englishProficiency: language });
     console.log(language);
   };
   return (

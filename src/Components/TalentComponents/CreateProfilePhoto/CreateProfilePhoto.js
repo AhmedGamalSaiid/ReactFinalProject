@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { storage } from "../../../firebase";
-import { updateData } from "../../../Network/Network";
+import { updateUserData } from "../../../Network/Network";
 
 export default function CreateProfilePhoto() {
     const [img, setimg] = useState(null);
@@ -29,7 +29,7 @@ export default function CreateProfilePhoto() {
                     .then(URL => {
                         let imgu = URL;
                         setimgUrl(imgu);
-                        URL && updateData("talent", { profilePhoto: URL });
+                        URL && updateUserData("talent", { profilePhoto: URL });
                     });
             }
         );

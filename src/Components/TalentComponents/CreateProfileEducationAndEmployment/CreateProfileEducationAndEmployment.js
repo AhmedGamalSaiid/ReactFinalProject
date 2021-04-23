@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { updateData } from "../../../Network/Network";
+import { updateUserData } from "../../../Network/Network";
 
 export default function CreateProfileEducationAndEmployment() {
   const [user, setuser] = useState({
@@ -30,7 +30,7 @@ export default function CreateProfileEducationAndEmployment() {
   const updateUser = () => {
     console.log(user);
 
-    updateData("talent", user);
+    updateUserData("talent", user);
   };
   return (
     <section className="bg-white border rounded mt-3 pt-4">
