@@ -1,21 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import firebaseApp, { db } from "../../../firebase";
+import firebaseApp from "../../../firebase";
 
 export default function FindWorkTalentHome() {
   const [verify, setverify] = useState(false);
   firebaseApp.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log(user.emailVerified);
+      //console.log(user.emailVerified);
       var verf = user.emailVerified;
       setverify(verf);
-      db.collection("talent").onSnapshot((d) => {
-        for (const key in d.docs) {
-          console.log(d.docs[key].data());
-        }
-      });
     }
   });
+
   return (
     <div className="d-none d-lg-block">
       <div className="row my-lg-4">

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
 import firebaseApp, { db } from "../firebase";
 import BeforeLoginRoutes from "../Routes/BeforeLoginRoutes";
 import ClientRoutes from "../Routes/ClientRoutes";
@@ -9,34 +8,48 @@ import { useState } from "react";
 
 export default function LayOut() {
   let [user, setUser] = useState();
-  const usertype = useSelector((state) => state.userData.userType);
+  let [type, settype] = useState("");
 
   firebaseApp.auth().onAuthStateChanged((usr) => {
     if (usr) {
+      //console.log(user);
       user = usr;
       setUser(user);
+      type = firebaseApp.auth().currentUser.displayName;
+      settype(type);
+      //window.location.reload(false);
+
+      //console.log(type);
     }
   });
-  var MainLayout = () => {
-    if (user) {
-      if (usertype === "talent") {
-        return <TalentRoutes />;
-      } else {
-        return <ClientRoutes />;
-      }
-    } else {
-      return <BeforeLoginRoutes />;
-    }
-  };
+
+  // var MainLayout = () => {
+  //   if (user) {
+  //     if (type === "talent") {
+  //       debugger;
+  //       //window.location.reload(false);
+  //       return <TalentRoutes />;
+  //     } else if (type === "client") {
+  //       //window.location.reload(false);
+  //       debugger;
+  //       return <ClientRoutes />;
+  //     }
+  //   } else {
+  //     return <BeforeLoginRoutes />;
+  //   }
+  // };
   return (
     <>
-      {/* {user ?
-        <TalentRoutes />
-        :
-        // <ClientRoutes />
+      {user ? (
+        type === "talent" ? (
+          <TalentRoutes />
+        ) : (
+          type === "client" && <ClientRoutes />
+        )
+      ) : (
         <BeforeLoginRoutes />
-      } */}
-      <MainLayout />
+      )}
+      {/* <MainLayout /> */}
     </>
   );
 }
