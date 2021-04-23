@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import firebaseApp from "../../../firebase";
 import createDocument from "../../../Network/Network";
 
@@ -41,17 +42,23 @@ export default function SignUpSecondForm() {
   };
 
   const signUpComplete = () => {
+    console.log(user);
     firebaseApp
       .auth()
       .createUserWithEmailAndPassword(user.email, user.password)
-      .then(res => {
+      .then((res) => {
+        let updateUser = firebaseApp.auth().currentUser;
+        //debugger;
+        updateUser.updateProfile({ displayName: user.userType });
+
         if (res.user) {
           res.user.sendEmailVerification();
         }
         user.authID = res.user.uid;
         setuser({ ...user, authID: user.authID });
+        console.log(user);
         createDocument(user.userType, user);
-        push("/email-verification");
+        // push("/email-verification");
       })
       .catch(err => {
         seterrMessage(err.message);
@@ -218,13 +225,14 @@ export default function SignUpSecondForm() {
           </div>
 
           <div className="d-grid gap-2 col-8 mx-auto mt-3 hitbtn-class loginpcolor mb-4">
-            <button
+            <Link
               className="btn bg-upwork "
               type="button"
               onClick={signUpComplete}
+              to="/email-verification"
             >
               Continue with Email
-            </button>
+            </Link>
           </div>
         </form>
       </div>

@@ -2,15 +2,18 @@
 
 import verify from "../../../assets/svg/verifyEmail.svg";
 import { Link } from "react-router-dom";
+import firebaseApp, { db } from "../../../firebase";
+import { useState } from "react";
 
 export default function EmailVerified() {
-  // const userType = useSelector((state) => state.signUpData.userType);
-  //const { push } = useHistory();
-  // const userRoute = () => {
-  //   // if (userType === "talent") {
-  //   //   push("/create-profile");
-  //   // }
-  // };
+  const [verified, setverify] = useState(false);
+  firebaseApp.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log(user.emailVerified);
+      var verf = user.emailVerified;
+      setverify(verf);
+    }
+  });
 
   return (
     <div className="text-center" style={{ margin: "67px 0" }}>
@@ -20,7 +23,6 @@ export default function EmailVerified() {
         Compelete your profile data
       </Link>
       <br />
-      {/* <h1>for testing {isVerfy}</h1> */}
     </div>
   );
 }
